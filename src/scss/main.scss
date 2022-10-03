@@ -583,7 +583,6 @@ button {
 
     .main-content {
         width: 1364px;
-        border: 1px solid red;
         margin: 0 auto;
         padding: 40px 0;
 
@@ -624,6 +623,7 @@ button {
                     padding-left: 40px;
                     background-color: $background-color-7;
                     border-radius: 5px;
+                    cursor: pointer;
 
                     p {
                         font-weight: 400;
@@ -653,6 +653,7 @@ button {
                     position: relative;
                     padding-left: 22px;
                     margin: 0 13px;
+                    cursor: pointer;
 
                     img {
                         position: absolute;
@@ -665,6 +666,7 @@ button {
                 .months {
                     display: flex;
                     height: 100%;
+                    cursor: pointer;
 
                     div {
                         display: flex;
