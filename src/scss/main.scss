@@ -23,6 +23,7 @@ $background-color-6: #B6BDCD;
 $background-color-7: #F1F1F1;
 $background-color-8: #CBF1D9;
 $background-color-9: #FFFFFF;
+$background-color-10: #F8F8F8;
 $font-color-1: #455085;
 $font-color-2: #43475D;
 $font-color-3: #5FD58C;
@@ -30,6 +31,7 @@ $font-color-4: #FAFAFA;
 $font-color-5: #626060;
 $font-color-6: #B6BDCD;
 $font-color-7: #58A67E;
+$font-color-8: #64C689;
 $border-color-1: #707070;
 
 
@@ -766,6 +768,180 @@ button {
                             margin-left: 20px;
                             font-size: 18px;
                             color: $font-color-2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .budget-summary {
+            width: 1364px;
+            margin: 0 auto;
+            background-color: $background-color-9;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+            margin-top: 40px;
+            padding-top: 30px;
+            padding-left: 30px;
+
+            .title {
+                font-size: 25px;
+                font-weight: 500;
+                color: $font-color-7;
+            }
+
+            .subtitle {
+                font-size: 23px;
+                font-weight: 500;
+                color: $font-color-7;
+                margin-top: 50px;
+            }
+
+            .boxes {
+                display: flex;
+                margin-top: 42px;
+
+                .box {
+                    width: 495px;
+                    height: 56px;
+                    border-radius: 15px;
+                    background-color: $background-color-10;
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    color: $font-color-2;
+                    position: relative;
+                    padding-left: 25px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    .def {
+                        font-weight: 500;
+                    }
+
+                    .value {
+                        font-weight: 400;
+                        position: absolute;
+                        left: 350px;
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                margin-top: 55px;
+
+
+
+                .button {
+                    display: flex;
+                    margin-right: 40px;
+                    cursor: pointer;
+
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $font-color-8;
+                        padding-left: 14px;
+                    }
+                }
+            }
+
+            .table {
+                margin-top: 54px;
+
+                .table-heads {
+                    display: flex;
+                    width: 94%;
+
+                    .table-head {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $font-color-2;
+
+                        &:nth-child(1) {
+                            width: 27%;
+                        }
+
+                        &:nth-child(2) {
+                            width: 30%;
+                        }
+
+                        &:nth-child(3) {
+                            width: 28%;
+                        }
+
+                        &:nth-child(4) {
+                            width: 15%;
+                        }
+                    }
+                }
+
+                .rows {
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .row {
+                        display: flex;
+                        height: 56px;
+                        width: 100%;
+                        margin-top: 20px;
+
+                        .data {
+                            display: flex;
+                            width: 94%;
+                            align-items: center;
+                            background-color: $background-color-10;
+                            border-radius: 15px;
+
+                            .cell {
+                                font-size: 20px;
+                                color: $font-color-2;
+
+                                &:nth-child(1) {
+                                    width: 27%;
+                                    font-weight: 500;
+                                    padding-left: 15px;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 30%;
+                                }
+
+                                &:nth-child(3) {
+                                    width: 28%;
+                                }
+
+                                &:nth-child(4) {
+                                    width: 15%;
+                                }
+                            }
+                        }
+
+                        .button {
+                            margin-left: 13px;
+                            display: none;
+
+                            img {
+                                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 16%));
+                            }
+
+                            &.active {
+                                display: block;
+                            }
                         }
                     }
                 }
