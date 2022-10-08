@@ -135,6 +135,7 @@ h2 {
     min-height: 100vh;
     display: flex;
     margin: 0 auto;
+    position: relative;
 }
 
 .text-basic {
@@ -470,6 +471,10 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: fixed;
+    top: 0;
+
+    height: 100vh;
 
     .logo {
         img {
@@ -559,22 +564,23 @@ button {
 }
 
 .right-content {
+    margin-left: 305px;
     width: 1615px;
-    background-color: $background-color-5;
     position: relative;
-    border: 1px solid rgba($border-color-1, 21%);
+    background-color: $background-color-5;
 
     .top-menu {
         height: 110px;
         border-bottom: 1px solid rgba($border-color-1, 21%);
-        position: sticky;
+        position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
+        width: 1615px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding-right: 20px;
+        z-index: 2;
+        background-color: $background-color-5;
 
         img {
             padding: 0 10px;
@@ -585,7 +591,7 @@ button {
 
     .main-content {
         width: 1364px;
-        margin: 0 auto;
+        margin: 110px auto 0 auto;
         padding: 40px 0;
 
         .budget-title {
@@ -776,13 +782,14 @@ button {
 
         .budget-summary {
             width: 1364px;
-            margin: 0 auto;
+            margin: 40px auto 100px auto;
             background-color: $background-color-9;
             border-radius: 15px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
-            margin-top: 40px;
             padding-top: 30px;
             padding-left: 30px;
+            padding-bottom: 70px;
+
 
             .title {
                 font-size: 25px;
@@ -859,7 +866,7 @@ button {
                 }
             }
 
-            .table {
+            .table-revenue {
                 margin-top: 54px;
 
                 .table-heads {
@@ -936,10 +943,6 @@ button {
                             display: none;
                             cursor: pointer;
 
-                            img {
-                                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 16%));
-                            }
-
                             &.active {
                                 display: block;
                             }
@@ -968,6 +971,195 @@ button {
                 opacity: 39%;
                 margin-right: 30px;
                 margin-top: 45px;
+            }
+
+            .table-expenses {
+                margin-top: 54px;
+
+                .table-heads {
+                    display: flex;
+                    width: 1254px;
+
+                    .table-head {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $font-color-2;
+
+                        &:nth-child(1) {
+                            width: 94px;
+                            margin-right: 20px;
+                        }
+
+                        &:nth-child(2) {
+                            width: 405px;
+                        }
+
+                        &:nth-child(3) {
+                            width: 240px;
+                        }
+
+                        &:nth-child(4) {
+                            width: 245px;
+                        }
+
+                        &:nth-child(5) {
+                            width: 183px;
+                        }
+
+                        &:nth-child(6) {
+                            width: 67px;
+                        }
+                    }
+                }
+            }
+
+            .rows {
+                display: flex;
+                flex-direction: column;
+
+
+                .row {
+                    display: flex;
+                    height: 56px;
+                    width: 1254px;
+                    margin-top: 20px;
+
+
+                    &.sub {
+                        justify-content: flex-end;
+
+                        .data {
+                            width: 1026px;
+
+                            .cell {
+                                &:nth-child(1) {
+                                    width: 291px;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 240px;
+                                }
+
+                                &:nth-child(3) {
+                                    width: 245px;
+                                }
+
+                                &:nth-child(4) {
+                                    width: 183px;
+                                }
+
+                                &:nth-child(5) {
+                                    width: 67px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .point {
+                    width: 94px;
+                    display: flex;
+                    font-weight: 600;
+                    font-family: 'Poppins', sans-serif;
+                    align-items: center;
+                    background-color: $background-color-10;
+                    font-size: 20px;
+                    justify-content: center;
+                    margin-right: 20px;
+                    border-radius: 15px;
+
+                }
+
+
+                .data {
+                    display: flex;
+                    width: 1140px;
+                    align-items: center;
+                    background-color: $background-color-10;
+                    border-radius: 15px;
+                    position: relative;
+
+                    &.width_1:after {
+                        width: calc((1892/4300)*100%);
+                    }
+
+                    &.width_2:after {
+                        width: calc((1000/2500)*100%);
+                    }
+
+                    &.width_3:after {
+                        width: calc((892/1800)*100%);
+                    }
+
+                    &.width_4:after {
+                        width: calc((2600/2600)*100%);
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+
+                    &.width_5:after {
+                        width: calc((906/1200)*100%);
+                    }
+
+                    &.width_6:after {
+                        width: calc((300/900)*100%);
+                    }
+
+                    &.width_7:after {
+                        width: calc((500/2000)*100%);
+                    }
+
+                    &.width_8:after {
+                        width: calc((500/2000)*100%);
+                    }
+
+                    &.width_9:after {
+                        width: calc((500/1000)*100%);
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        background-color: $background-color-1;
+                        height: 100%;
+                        z-index: 0;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                    }
+
+                    .cell {
+                        font-size: 20px;
+                        color: $font-color-2;
+                        z-index: 1;
+
+                        &:nth-child(1) {
+                            width: 405px;
+                            font-weight: 500;
+                            padding-left: 20px;
+                        }
+
+                        &:nth-child(2) {
+                            width: 240px;
+                        }
+
+                        &:nth-child(3) {
+                            width: 245px;
+                        }
+
+                        &:nth-child(4) {
+                            width: 183px;
+                        }
+
+                        &:nth-child(5) {
+                            width: 67px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }
