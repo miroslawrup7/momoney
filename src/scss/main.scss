@@ -32,6 +32,9 @@ $font-color-5: #626060;
 $font-color-6: #B6BDCD;
 $font-color-7: #58A67E;
 $font-color-8: #64C689;
+$font-color-9: #535873;
+$font-color-10: #9A5353;
+$font-color-11: #68AE81;
 $border-color-1: #707070;
 
 
@@ -211,6 +214,53 @@ button {
         width: 300px;
         margin-top: 60px;
     }
+}
+
+.buttons {
+    display: flex;
+    margin-top: 55px;
+
+    &.margin-big {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    .button {
+        display: flex;
+        margin-right: 40px;
+        cursor: pointer;
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            color: $font-color-8;
+            padding-left: 14px;
+        }
+    }
+}
+
+.box-title {
+    font-size: 25px;
+    font-weight: 500;
+    color: $font-color-7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box-subtitle {
+    font-size: 23px;
+    font-weight: 500;
+    color: $font-color-7;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .left-block {
@@ -594,7 +644,7 @@ button {
         margin: 110px auto 0 auto;
         padding: 40px 0;
 
-        .budget-title {
+        .title {
             display: flex;
             margin-bottom: 70px;
 
@@ -604,7 +654,7 @@ button {
             }
         }
 
-        .budget-filter {
+        .filter {
             display: flex;
             align-items: center;
             height: 52px;
@@ -790,20 +840,6 @@ button {
             padding-left: 30px;
             padding-bottom: 70px;
 
-
-            .title {
-                font-size: 25px;
-                font-weight: 500;
-                color: $font-color-7;
-            }
-
-            .subtitle {
-                font-size: 23px;
-                font-weight: 500;
-                color: $font-color-7;
-                margin-top: 50px;
-            }
-
             .boxes {
                 display: flex;
                 margin-top: 42px;
@@ -837,34 +873,34 @@ button {
                 }
             }
 
-            .buttons {
-                display: flex;
-                margin-top: 55px;
+            // .buttons {
+            //     display: flex;
+            //     margin-top: 55px;
 
 
 
-                .button {
-                    display: flex;
-                    margin-right: 40px;
-                    cursor: pointer;
+            //     .button {
+            //         display: flex;
+            //         margin-right: 40px;
+            //         cursor: pointer;
 
-                    img {
-                        height: 30px;
-                        width: 30px;
-                    }
+            //         img {
+            //             height: 30px;
+            //             width: 30px;
+            //         }
 
-                    &:last-child {
-                        margin-right: 0;
-                    }
+            //         &:last-child {
+            //             margin-right: 0;
+            //         }
 
-                    p {
-                        font-size: 20px;
-                        font-weight: 500;
-                        color: $font-color-8;
-                        padding-left: 14px;
-                    }
-                }
-            }
+            //         p {
+            //             font-size: 20px;
+            //             font-weight: 500;
+            //             color: $font-color-8;
+            //             padding-left: 14px;
+            //         }
+            //     }
+            // }
 
             .table-revenue {
                 margin-top: 54px;
@@ -1159,6 +1195,208 @@ button {
                             cursor: pointer;
                         }
                     }
+                }
+            }
+        }
+
+        .account-summary {
+            width: 1364px;
+            margin: 40px auto 100px auto;
+            background-color: $background-color-9;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-bottom: 40px;
+
+            .boxes {
+                display: flex;
+                margin-top: 40px;
+                font-size: 23px;
+                font-weight: 600;
+                color: $font-color-9;
+
+
+
+                .box {
+                    width: 25%;
+                    display: flex;
+                    border-right: 1px solid rgba($border-color-1, 23%);
+                    padding: 15px 0 15px 30px;
+
+
+                    &:first-child {
+                        padding: 15px 0 15px 0;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    .image {
+                        display: flex;
+                        align-items: flex-start;
+
+                        img[alt="account-type"] {
+                            height: 30px;
+                        }
+                    }
+
+                    .wrapper {
+                        margin-left: 20px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .info-title {
+                            font-family: 'Poppins', sans-serif;
+                        }
+
+                        .info-data {
+                            font-weight: 400;
+                            margin-top: 11px;
+                            font-family: 'Poppins', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+
+        .account-history {
+            width: 1364px;
+            margin: 40px auto 100px auto;
+            background-color: $background-color-9;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-bottom: 40px;
+            padding-right: 30px;
+
+            .headers {
+                display: flex;
+                margin-top: 38px;
+                height: 85px;
+                background-color: $background-color-1;
+                border-radius: 15px;
+                align-items: center;
+                margin-left: -15px;
+                margin-right: -15px;
+                width: calc(100% + 30px);
+
+                .header {
+
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $font-color-2;
+
+                    &:nth-child(1) {
+                        width: 13%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 15%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(4) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(5) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(6) {
+                        width: 18%;
+                    }
+
+                }
+            }
+
+            .date-bar {
+                width: calc(100% + 60px);
+                background-color: $background-color-1;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                margin-top: 28px;
+                margin-left: -30px;
+                margin-right: -30px;
+                padding-left: 30px;
+                font-size: 18px;
+                color: $font-color-2;
+            }
+
+            .transaction-row {
+                height: 122px;
+                display: flex;
+                margin-left: -15px;
+                margin-right: -15px;
+                width: calc(100% + 30px);
+                align-items: center;
+
+                .trans-col {
+                    font-size: 20px;
+                    color: $font-color-2;
+
+                    &:nth-child(1) {
+                        width: 13%;
+                        padding-left: 15px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 15%;
+                        font-weight: 500;
+
+                        &.receipts {
+                            color: $font-color-11;
+                        }
+
+                        &.expenses {
+                            color: $font-color-10;
+                        }
+
+                    }
+
+                    &:nth-child(3) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(4) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(5) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(6) {
+                        width: 18%;
+                    }
+                }
+            }
+
+            hr {
+                border-top: 1px solid rgba($border-color-1, 20%);
+                margin-left: -30px;
+                margin-right: -30px;
+                width: calc(100% + 60px);
+            }
+
+            .see-more {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+                font-size: 20px;
+                color: $font-color-8;
+                cursor: pointer;
+
+                img {
+                    margin-left: 10px;
                 }
             }
         }

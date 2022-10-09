@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=123" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1665316499252" />
 
     <title>MoMoney</title>
 </head>
@@ -24,14 +24,18 @@
                     <img src="./img/arrow-left.svg" alt="arrow-left">
                 </div>
                 <div class="menu">
-                    <div class="menu-item active">
-                        <img src="./img/target2.svg" alt="target2">
-                        <p>Budżet</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="./img/bank.svg" alt="bank">
-                        <p>Konta</p>
-                    </div>
+                    <a href="./budget.html">
+                        <div class="menu-item active">
+                            <img src="./img/target2.svg" alt="target2">
+                            <p>Budżet</p>
+                        </div>
+                    </a>
+                    <a href="./accounts.html">
+                        <div class="menu-item">
+                            <img src="./img/bank.svg" alt="bank">
+                            <p>Konta</p>
+                        </div>
+                    </a>
                     <div class="menu-item">
                         <img src="./img/transaction.svg" alt="transaction">
                         <p>Transakcje</p>
@@ -67,10 +71,10 @@
                     <img src="./img/logout.svg" alt="logout">
                 </div>
                 <div class="main-content">
-                    <div class="budget-title">
+                    <div class="title">
                         <h2>Budżet</h2>
                     </div>
-                    <div class="budget-filter">
+                    <div class="filter">
                         <div class="budgets">
                             <p>Budżet:</p>
                             <div class="budget-list">
@@ -175,9 +179,9 @@
                         </div>
                     </div>
                     <div class="budget-summary">
-                        <div class="title">Podsumowanie budżetu</div>
+                        <div class="box-title">Podsumowanie budżetu</div>
 
-                        <div class="subtitle">Wpływy</div>
+                        <div class="box-subtitle">Wpływy</div>
                         <div class="boxes">
                             <div class="box">
                                 <p class="def">Planowana kwota wpływów:</p>
@@ -249,7 +253,7 @@
 
                         <hr>
 
-                        <div class="subtitle">Wydatki</div>
+                        <div class="box-subtitle">Wydatki</div>
                         <div class="buttons">
                             <div class="button">
                                 <img src="./img/plus.svg" alt="plus">
@@ -373,7 +377,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=123"></script>
+    <script src="./js/all.min.js?cache_bust=1665316499252"></script>
 </body>
 
 </html>

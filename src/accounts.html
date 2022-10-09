@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=123" />
+
+    <title>MoMoney</title>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-menu">
+                <div class="logo">
+                    <img src="./img/logo2.svg" alt="logo">
+                </div>
+                <div class="arrow">
+                    <img src="./img/arrow-left.svg" alt="arrow-left">
+                </div>
+                <div class="menu">
+                    <a href="./budget.html">
+                        <div class="menu-item">
+                            <img src="./img/target2.svg" alt="target2">
+                            <p>Budżet</p>
+                        </div>
+                    </a>
+                    <a href="./accounts.html">
+                        <div class="menu-item active">
+                            <img src="./img/bank.svg" alt="bank">
+                            <p>Konta</p>
+                        </div>
+                    </a>
+                    <div class="menu-item">
+                        <img src="./img/transaction.svg" alt="transaction">
+                        <p>Transakcje</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./img/target3.svg" alt="target3">
+                        <p>Cele</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./img/report.svg" alt="report">
+                        <p>Raporty</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./img/currency2.svg" alt="currency2">
+                        <p>Kurs Walut</p>
+                    </div>
+                </div>
+                <div class="balance">
+                    <div class="balance-title">
+                        <img src="./img/cash.svg" alt="cash">
+                        <p>Stan kont</p>
+                    </div>
+                    <p>Domowe: <span>25 000 zł</span></p>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="top-menu">
+                    <img src="./img/user.svg" alt="user">
+                    <img src="./img/notification.svg" alt="notification">
+                    <img src="./img//messages.svg" alt="messages">
+                    <img src="./img/settings.svg" alt="settings">
+                    <img src="./img/help.svg" alt="help">
+                    <img src="./img/logout.svg" alt="logout">
+                </div>
+                <div class="main-content">
+                    <div class="title">
+                        <h2>Konta</h2>
+                    </div>
+                    <div class="filter">
+                        <div class="budgets">
+                            <p>Konto:</p>
+                            <div class="budget-list">
+                                <p>Konto osobiste</p>
+                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons margin-big">
+                        <div class="button">
+                            <img src="./img/plus.svg" alt="plus">
+                            <p>Dodaj nowe konto</p>
+                        </div>
+                        <div class="button">
+                            <img src="./img/pencil.svg" alt="pencil">
+                            <p>Edytuj dane konta</p>
+                        </div>
+                        <div class="button">
+                            <img src="./img/refresh.svg" alt="refresh">
+                            <p>Aktualizuj saldo</p>
+                        </div>
+                        <div class="button">
+                            <img src="./img/delete.svg" alt="delete">
+                            <p>Usuń konto</p>
+                        </div>
+                    </div>
+
+                    <div class="account-summary">
+                        <div class="box-title">Informacje o koncie</div>
+                        <div class="boxes">
+                            <div class="box">
+                                <div class="image">
+                                    <img src="./img/balance.svg" alt="balance">
+                                </div>
+                                <div class="wrapper">
+                                    <p class="info-title">Stan konta:</p>
+                                    <p class="info-data">25 000 zł</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="image">
+                                    <img src="./img/account-type.svg" alt="account-type">
+                                </div>
+                                <div class="wrapper">
+                                    <p class="info-title">Typ konta:</p>
+                                    <p class="info-data">ROR</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="image">
+                                    <img src="./img/currency3.svg" alt="currency">
+                                </div>
+                                <div class="wrapper">
+                                    <p class="info-title">Waluta:</p>
+                                    <p class="info-data">PLN</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="image">
+                                    <img src="./img/transactions.svg" alt="transactions">
+                                </div>
+                                <div class="wrapper">
+                                    <p class="info-title">Ilość transakcji:</p>
+                                    <p class="info-data">31</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="account-history">
+                        <div class="box-title">Historia transakcji</div>
+                        <div class="headers">
+                            <div class="header"></div>
+                            <div class="header">Kwota</div>
+                            <div class="header">Konto</div>
+                            <div class="header">Odbiorca</div>
+                            <div class="header">Kategoria</div>
+                            <div class="header">Komentarz</div>
+                        </div>
+                        <div class="date-bar">Piątek 09.10.2002</div>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-24,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">ParZona Cafe</div>
+                            <div class="trans-col">Żywność</div>
+                            <div class="trans-col">Śniadanie</div>
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-68,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Falla</div>
+                            <div class="trans-col">Żywność</div>
+                            <div class="trans-col">Brak</div>
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-350,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Orlen</div>
+                            <div class="trans-col">Transport</div>
+                            <div class="trans-col">Brak</div>
+                        </div>
+                        <div class="date-bar">Środa 07.10.2002</div>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/receipts.svg" alt="receipts"></div>
+                            <div class="trans-col receipts">+468,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Adrianna Nowak</div>
+                            <div class="trans-col">Mieszkanie</div>
+                            <div class="trans-col">Rachunki</div>
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-150,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Vitasport</div>
+                            <div class="trans-col">Zdrowie</div>
+                            <div class="trans-col">Rehabilitacja</div>
+                        </div>
+                        <hr>
+                        <div class="see-more">
+                            Pokaż więcej <img src="./img/arrow-down3.svg" alt="arrow-down">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="./js/all.min.js?cache_bust=123"></script>
+</body>
+
+</html>
