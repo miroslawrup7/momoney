@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="253.492" height="253.393" viewBox="0 0 253.492 253.393">
+  <g id="Group_6214" data-name="Group 6214" transform="translate(-509.129 -676.299)">
+    <g id="Group_6166" data-name="Group 6166" transform="translate(-75.871 153.299)">
+      <g id="Group_6165" data-name="Group 6165" transform="translate(585 523)">
+        <path id="Path_917" data-name="Path 917" d="M599.932,40a126.7,126.7,0,1,1,.127,253.393l-.1-126.7Z" transform="translate(-473.261 -40)" fill="#8491cf"/>
+        <path id="Path_918" data-name="Path 918" d="M394.671,498.7A126.7,126.7,0,0,1,268,372.075L394.7,372Z" transform="translate(-268 -245.303)" fill="#43475d"/>
+        <path id="Path_919" data-name="Path 919" d="M268,166.645A126.7,126.7,0,0,1,394.521,40l.176,126.7Z" transform="translate(-268 -40)" fill="#d3d6e0"/>
+      </g>
+    </g>
+    <text id="_50_" data-name="50%" transform="translate(672.5 810.996)" fill="#fafafa" font-size="23" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">50%</tspan></text>
+    <text id="_25_" data-name="25%" transform="translate(557.5 763.996)" fill="#fafafa" font-size="23" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">25%</tspan></text>
+    <text id="_25_2" data-name="25%" transform="translate(557.5 855.996)" fill="#fafafa" font-size="23" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">25%</tspan></text>
+  </g>
+</svg>

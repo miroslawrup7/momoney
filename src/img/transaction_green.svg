@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="33.238"
+   height="24.372"
+   viewBox="0 0 33.238 24.372"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="transaction_green.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="29.501067"
+     inkscape:cx="16.609569"
+     inkscape:cy="12.169051"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <g
+     id="Group_324"
+     data-name="Group 324"
+     transform="translate(-386.53 627.145)"
+     style="fill:#64c689;fill-opacity:1">
+    <path
+       id="Path_688"
+       data-name="Path 688"
+       d="M549.843-618.469q-3.191,3.194-6.383,6.388a1.143,1.143,0,0,1-1.34.354,1.147,1.147,0,0,1-.682-1.207c.014-1.026,0-2.052,0-3.134h-9.75c-.914,0-1.325-.413-1.325-1.333q0-2.025,0-4.048a1.123,1.123,0,0,1,1.253-1.264q4.689,0,9.376,0h.445v-2.163c0-.37,0-.739,0-1.108a1.074,1.074,0,0,1,.684-1.065,1.06,1.06,0,0,1,1.236.268q1.631,1.622,3.255,3.252,1.615,1.614,3.229,3.23A1.136,1.136,0,0,1,549.843-618.469Z"
+       transform="translate(-130.54 0)"
+       fill="#b6bdcd"
+       style="fill:#64c689;fill-opacity:1" />
+    <path
+       id="Path_689"
+       data-name="Path 689"
+       d="M406.472-525.519q0,2.041,0,4.083a1.126,1.126,0,0,1-1.262,1.257H395.4c0,1.047,0,2.06,0,3.071a2.287,2.287,0,0,1-.016.414,1.087,1.087,0,0,1-.741.88,1.056,1.056,0,0,1-1.095-.222c-.07-.059-.132-.128-.2-.193l-6.336-6.338a1.149,1.149,0,0,1,.008-1.878q3.2-3.206,6.409-6.412a1.1,1.1,0,0,1,1.157-.346,1.069,1.069,0,0,1,.784.839,1.855,1.855,0,0,1,.026.412c0,1.025,0,2.051,0,3.127h9.757A1.146,1.146,0,0,1,406.472-525.519Z"
+       transform="translate(0 -87.027)"
+       fill="#b6bdcd"
+       style="fill:#64c689;fill-opacity:1" />
+  </g>
+</svg>

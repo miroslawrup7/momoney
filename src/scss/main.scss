@@ -24,6 +24,8 @@ $background-color-7: #F1F1F1;
 $background-color-8: #CBF1D9;
 $background-color-9: #FFFFFF;
 $background-color-10: #F8F8F8;
+$background-color-11: #E4E4E4;
+$background-color-12: #64C689;
 $font-color-1: #455085;
 $font-color-2: #43475D;
 $font-color-3: #5FD58C;
@@ -36,6 +38,35 @@ $font-color-9: #535873;
 $font-color-10: #9A5353;
 $font-color-11: #68AE81;
 $border-color-1: #707070;
+$border-color-2: #ACACAC;
+
+
+%custom-list {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    select {
+        border: $border-color-1 0 solid;
+        min-height: fit-content;
+        min-width: fit-content;
+        padding-left: 20px;
+        padding-right: calc(20px + 20px * 1.5);
+        appearance: none;
+        background: url("../img/arrow-down4.svg") no-repeat;
+        background-position: calc(100% - 20px) 50%;
+        cursor: pointer;
+        font-size: 18px;
+        background-color: white;
+        border-radius: 0;
+
+        option {
+            background-color: white;
+            font-size: 18px;
+            color: $font-color-2;
+        }
+    }
+}
 
 
 /* The container */
@@ -189,32 +220,60 @@ button {
     font-weight: 600;
     line-height: 27px;
     cursor: pointer;
-
-    &.register {
-        width: 400px;
-        margin-top: 20px;
-    }
-
-    &.login {
-        width: 314px;
-        margin-top: 50px;
-    }
-
-    &.logging {
-        width: 400px;
-        margin-top: 55px;
-    }
-
-    &.next {
-        width: 300px;
-        margin-top: 20px;
-    }
-
-    &.next-2 {
-        width: 300px;
-        margin-top: 60px;
-    }
 }
+
+p.info {
+    font-size: 25px;
+    color: $font-color-2;
+    margin-top: -10px;
+}
+
+a {
+    &.btn {
+        height: 60px;
+        background-color: $background-color-2;
+        border-radius: 30px;
+        color: $font-color-4;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.register {
+            width: 400px;
+            margin-top: 20px;
+        }
+
+        &.logging {
+            width: 400px;
+            margin-top: 55px;
+        }
+
+        &.next {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        &.next-2 {
+            width: 300px;
+            margin-top: 60px;
+        }
+
+        &.login {
+            width: 314px;
+            margin-top: 50px;
+        }
+
+        &.add {
+            width: 314px;
+        }
+    }
+
+}
+
 
 .buttons {
     display: flex;
@@ -223,6 +282,12 @@ button {
     &.margin-big {
         margin-top: 70px;
         margin-bottom: 70px;
+    }
+
+    &.no-margin {
+        margin-top: 0;
+        align-items: flex-end;
+        margin-left: 28px;
     }
 
     .button {
@@ -263,6 +328,21 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
+.custom-list-1 {
+    @extend %custom-list;
+
+    select {
+        height: 52px;
+        font-size: 20px;
+        background-color: $background-color-7;
+        border-radius: 5px;
+
+        option {
+            font-size: 20px;
+        }
+    }
+}
+
 .left-block {
     width: 948px;
     display: flex;
@@ -284,7 +364,6 @@ button {
 
     .content {
         display: flex;
-
         flex-direction: column;
         align-items: center;
 
@@ -349,34 +428,81 @@ button {
     flex-direction: column;
     background-color: $background-color-5;
 
-
     .lang-box {
         position: absolute;
-        right: 54px;
-        top: 42px;
-        width: 122px;
-        height: 45px;
-        background-color: $background-color-3;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 0 5px;
+        right: 50px;
+        top: 50px;
 
-        .flag {
-            height: 24px;
-            width: 38px;
-        }
-
-        .lang {
-            font-size: 18px;
-            color: $font-color-5;
-        }
-
-        .arrow {
-            height: 8px;
-            width: 17px;
+        .form-elem_1 {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
             cursor: pointer;
+
+            label {
+                font-size: 20px;
+                font-weight: 500;
+                color: $font-color-2;
+
+                &.date {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        right: 16px;
+                        top: 50%;
+                        transform: translateY(-50%)
+                    }
+                }
+            }
+
+            select {
+                height: 45px;
+                width: 122px;
+                border-radius: 5px;
+                padding-left: 57px;
+                appearance: none;
+                background: url("../img/arrow-down4.svg") no-repeat;
+                background-position: calc(100% - 12px) 50%;
+                font-size: 18px;
+                color: $font-color-2;
+                background-color: $background-color-3;
+                cursor: pointer;
+
+                option {
+                    background-color: $background-color-3;
+                    font-size: 18px;
+                    color: $font-color-2;
+                }
+            }
+
+            .flag-box {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+
+                img {
+                    height: 24px;
+                }
+
+            }
+
+            input {
+                margin-left: 10px;
+                border: $border-color-2 1px solid;
+                height: 60px;
+                width: 300px;
+                border-radius: 10px;
+                padding: 0 16px;
+                font-size: 20px;
+                color: $font-color-2;
+                background-color: white;
+
+                &::placeholder {
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -484,32 +610,76 @@ button {
             }
         }
 
-        .currency-list {
-            width: 402px;
-            height: 60px;
-            border: 1px solid $border-color-1;
-            border-radius: 10px;
-            margin-top: 60px;
+        .form-elem_2 {
             display: flex;
-            align-items: center;
+            justify-content: flex-end;
             position: relative;
-            padding: 0 10px;
+            margin-top: 60px;
+            cursor: pointer;
 
-            .flag {
-                margin: 0 10px;
+            label {
+                font-size: 20px;
+                font-weight: 500;
+                color: $font-color-2;
+
+                &.date {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        right: 16px;
+                        top: 50%;
+                        transform: translateY(-50%)
+                    }
+                }
             }
 
-            .symbol {
+            select {
+                border: $border-color-1 1px solid;
+                height: 60px;
+                width: 402px;
+                border-radius: 10px;
+                padding-left: 66px;
+                appearance: none;
+                background: url("../img/arrow-down4.svg") no-repeat;
+                background-position: calc(100% - 25px) 50%;
                 font-size: 18px;
-                line-height: 24px;
-                color: $font-color-5;
+                color: $font-color-2;
+                background-color: white;
+                cursor: pointer;
+
+                option {
+                    background-color: white;
+                    font-size: 18px;
+                    color: $font-color-2;
+                }
             }
 
-            .arrow {
+            .flag-box {
                 position: absolute;
                 top: 50%;
+                left: 22px;
                 transform: translateY(-50%);
-                right: 25px;
+
+                img {
+                    height: 24px;
+                }
+            }
+
+            input {
+                margin-left: 10px;
+                border: $border-color-2 1px solid;
+                height: 60px;
+                width: 300px;
+                border-radius: 10px;
+                padding: 0 16px;
+                font-size: 20px;
+                color: $font-color-2;
+                background-color: white;
+
+                &::placeholder {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -523,7 +693,6 @@ button {
     align-items: center;
     position: fixed;
     top: 0;
-
     height: 100vh;
 
     .logo {
@@ -552,6 +721,15 @@ button {
         width: 100%;
         margin-top: 12px;
 
+        a {
+            display: block;
+            width: 100%;
+
+            &:hover {
+                background-color: rgba($background-color-6, 8%);
+            }
+        }
+
         .menu-item {
             height: 70px;
             margin: 36px 0;
@@ -560,9 +738,49 @@ button {
             display: flex;
             align-items: center;
             cursor: pointer;
+            position: relative;
+
+            .bar {
+                height: 36px;
+                width: 9px;
+                position: absolute;
+                left: 0;
+                background-color: $background-color-12;
+                display: none;
+            }
+
+            &.budget {
+                background: url(../img/target2.svg) no-repeat;
+                background-position: (50px, 50%);
+            }
+
+            &.accounts {
+                background: url(../img/bank.svg) no-repeat;
+                background-position: (50px, 50%);
+            }
+
+            &.transactions {
+                background: url(../img/transaction.svg) no-repeat;
+                background-position: (50px, 50%);
+            }
+
+            &.targets {
+                background: url(../img/target3.svg) no-repeat;
+                background-position: (50px, 50%);
+            }
+
+            &.reports {
+                background: url(../img/report.svg) no-repeat;
+                background-position: (50px, 50%);
+            }
+
+            &.currency {
+                background: url(../img/currency2.svg) no-repeat;
+                background-position: (50px, 50%);
+            }
 
             p {
-                padding-left: 15px;
+                padding-left: 50px;
                 font-size: 23px;
                 color: $font-color-6;
                 line-height: 34px;
@@ -570,7 +788,44 @@ button {
             }
 
             &.active {
-                background-color: rgba($background-color-6, 8%);
+
+                .bar {
+                    display: block;
+                }
+
+                &.budget {
+                    background: url(../img/target2_green.svg) no-repeat;
+                    background-position: (50px, 50%);
+                }
+
+                &.accounts {
+                    background: url(../img/bank_green.svg) no-repeat;
+                    background-position: (50px, 50%);
+                }
+
+                &.transactions {
+                    background: url(../img/transaction_green.svg) no-repeat;
+                    background-position: (50px, 50%);
+                }
+
+                &.targets {
+                    background: url(../img/target3_green.svg) no-repeat;
+                    background-position: (50px, 50%);
+                }
+
+                &.reports {
+                    background: url(../img/report_green.svg) no-repeat;
+                    background-position: (50px, 50%);
+                }
+
+                &.currency {
+                    background: url(../img/currency2_green.svg) no-repeat;
+                    background-position: (50px, 50%);
+                }
+
+                p {
+                    color: $font-color-8;
+                }
             }
         }
     }
@@ -593,7 +848,6 @@ button {
                 font-weight: 600;
             }
         }
-
 
         .balance-title {
             display: flex;
@@ -646,12 +900,93 @@ button {
 
         .title {
             display: flex;
-            margin-bottom: 70px;
+            margin-bottom: 40px;
+            position: relative;
 
             h2 {
                 font-weight: 600;
                 color: $font-color-7;
             }
+
+            .dots {
+                position: absolute;
+                display: block;
+                left: 140px;
+                top: 26px;
+                padding: 0 10px;
+                cursor: pointer;
+            }
+
+            .menu-popup {
+                position: absolute;
+                width: 316px;
+                left: 175px;
+                top: 26px;
+                border-radius: 10px;
+                z-index: 10;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+                background-color: white;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .menu-row {
+                    height: 86px;
+                    color: $font-color-2;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px rgba($border-color-1, 21%) solid;
+                    cursor: pointer;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    img {
+                        padding: 0 14px 0 28px;
+                    }
+                }
+            }
+        }
+
+        .sub-menu {
+            border-bottom: 1px rgba($font-color-8, 35%) solid;
+            display: flex;
+            position: relative;
+            height: 60px;
+
+            .sub-menu-item {
+                font-size: 21px;
+                padding: 12px;
+                cursor: pointer;
+                height: 61px;
+                position: absolute;
+                color: $font-color-2;
+            }
+
+            .active {
+                font-weight: 600;
+                border-bottom: 3px $font-color-8 solid;
+            }
+
+            .two {
+                margin-left: 265px;
+            }
+
+            .three {
+                margin-left: 490px;
+            }
+
+            .four {
+                margin-left: 760px;
+            }
+        }
+
+        .box-subtitle {
+            margin-top: 60px;
         }
 
         .filter {
@@ -662,6 +997,10 @@ button {
             font-size: 20px;
             color: $font-color-2;
 
+            &.reports {
+                margin-top: 30px;
+            }
+
             .budgets {
                 display: flex;
                 align-items: center;
@@ -670,29 +1009,7 @@ button {
 
                 p {
                     font-weight: 600;
-                }
-
-                .budget-list {
-                    height: 100%;
-                    width: 247px;
-                    display: flex;
-                    align-items: center;
-                    margin-left: 10px;
-                    padding-left: 40px;
-                    background-color: $background-color-7;
-                    border-radius: 5px;
-                    cursor: pointer;
-
-                    p {
-                        font-weight: 400;
-                    }
-
-                    img {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 15px;
-                    }
+                    margin-right: 12px;
                 }
             }
 
@@ -701,30 +1018,15 @@ button {
                 height: 100%;
                 align-items: center;
 
-                .years {
-                    display: flex;
-                    width: 118px;
-                    height: 100%;
-                    background-color: $background-color-7;
-                    border-radius: 5px;
-                    align-items: center;
-                    position: relative;
-                    padding-left: 22px;
-                    margin: 0 13px;
-                    cursor: pointer;
-
-                    img {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 15px;
-                    }
+                p {
+                    margin-right: 12px;
                 }
 
                 .months {
                     display: flex;
                     height: 100%;
                     cursor: pointer;
+                    margin-left: 18px;
 
                     div {
                         display: flex;
@@ -740,6 +1042,10 @@ button {
 
                         &.active {
                             background-color: $background-color-8;
+                        }
+
+                        &:hover {
+                            background-color: rgba($background-color-8, 50%);
                         }
                     }
                 }
@@ -774,9 +1080,6 @@ button {
                         position: relative;
                         margin-left: 26px;
 
-
-                        img {}
-
                         .percent {
                             position: absolute;
                             top: 50%;
@@ -795,7 +1098,6 @@ button {
                             color: $font-color-2;
                             font-weight: 500;
                             margin-bottom: 12px;
-
 
                             span {
                                 font-weight: 400;
@@ -873,35 +1175,6 @@ button {
                 }
             }
 
-            // .buttons {
-            //     display: flex;
-            //     margin-top: 55px;
-
-
-
-            //     .button {
-            //         display: flex;
-            //         margin-right: 40px;
-            //         cursor: pointer;
-
-            //         img {
-            //             height: 30px;
-            //             width: 30px;
-            //         }
-
-            //         &:last-child {
-            //             margin-right: 0;
-            //         }
-
-            //         p {
-            //             font-size: 20px;
-            //             font-weight: 500;
-            //             color: $font-color-8;
-            //             padding-left: 14px;
-            //         }
-            //     }
-            // }
-
             .table-revenue {
                 margin-top: 54px;
 
@@ -935,7 +1208,6 @@ button {
                 .rows {
                     display: flex;
                     flex-direction: column;
-
 
                     .row {
                         display: flex;
@@ -978,6 +1250,26 @@ button {
                             margin-left: 13px;
                             display: none;
                             cursor: pointer;
+                            position: relative;
+
+                            .tooltip {
+                                position: absolute;
+                                top: -58px;
+                                height: 64px;
+                                background-color: $background-color-5;
+                                right: -138px;
+                                align-items: center;
+                                padding: 0 15px;
+                                border-radius: 5px;
+                                box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+                                font-size: 14px;
+                                color: $font-color-2;
+                                display: none;
+
+                                &.active {
+                                    display: flex;
+                                }
+                            }
 
                             &.active {
                                 display: block;
@@ -1053,13 +1345,11 @@ button {
                 display: flex;
                 flex-direction: column;
 
-
                 .row {
                     display: flex;
                     height: 56px;
                     width: 1254px;
                     margin-top: 20px;
-
 
                     &.sub {
                         justify-content: flex-end;
@@ -1103,7 +1393,6 @@ button {
                     justify-content: center;
                     margin-right: 20px;
                     border-radius: 15px;
-
                 }
 
 
@@ -1216,14 +1505,11 @@ button {
                 font-weight: 600;
                 color: $font-color-9;
 
-
-
                 .box {
                     width: 25%;
                     display: flex;
                     border-right: 1px solid rgba($border-color-1, 23%);
                     padding: 15px 0 15px 30px;
-
 
                     &:first-child {
                         padding: 15px 0 15px 0;
@@ -1261,6 +1547,132 @@ button {
             }
         }
 
+        .add-transaction {
+            width: 1364px;
+            margin: 40px auto 58px auto;
+            background-color: $background-color-9;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-bottom: 40px;
+            padding-right: 30px;
+
+            .rows {
+                margin-top: 70px;
+
+                .row {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-top: 30px;
+
+                    .form-elem {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        &:nth-child(1) {
+                            flex-basis: 31%;
+                        }
+
+                        &:nth-child(2) {
+                            flex-basis: 34%;
+                        }
+
+                        &:nth-child(3) {
+                            flex-basis: 35%;
+                        }
+
+                        &.double {
+                            position: relative;
+
+                            input {
+                                padding-right: 125px;
+                            }
+
+                            select {
+                                position: absolute;
+                                right: 0;
+                                width: 110px;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                                background-color: $background-color-3;
+                                border-left: none;
+                            }
+                        }
+
+                        label {
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: $font-color-2;
+
+                            &.date {
+                                position: relative;
+
+                                img {
+                                    position: absolute;
+                                    right: 16px;
+                                    top: 50%;
+                                    transform: translateY(-50%)
+                                }
+                            }
+                        }
+
+                        select {
+                            margin-left: 10px;
+                            border: $border-color-2 1px solid;
+                            height: 60px;
+                            width: 300px;
+                            border-radius: 10px;
+                            padding: 0 16px;
+                            appearance: none;
+                            background: url("../img/arrow-down4.svg") no-repeat;
+                            background-position: calc(100% - 16px) 50%;
+                            font-size: 20px;
+                            color: $font-color-2;
+                            background-color: white;
+
+                            option {
+                                background-color: white;
+                            }
+                        }
+
+                        input {
+                            margin-left: 10px;
+                            border: $border-color-2 1px solid;
+                            height: 60px;
+                            width: 300px;
+                            border-radius: 10px;
+                            padding: 0 16px;
+                            font-size: 20px;
+                            color: $font-color-2;
+                            background-color: white;
+
+                            &::placeholder {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .add-buttons {
+                display: flex;
+                margin-top: 45px;
+                justify-content: center;
+                align-items: center;
+
+                .cancel-add {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $font-color-8;
+                }
+
+                .btn.add {
+                    margin-left: 40px;
+                }
+            }
+        }
+
         .account-history {
             width: 1364px;
             margin: 40px auto 100px auto;
@@ -1285,7 +1697,6 @@ button {
                 width: calc(100% + 30px);
 
                 .header {
-
                     font-size: 20px;
                     font-weight: 500;
                     color: $font-color-2;
@@ -1313,7 +1724,6 @@ button {
                     &:nth-child(6) {
                         width: 18%;
                     }
-
                 }
             }
 
@@ -1337,6 +1747,7 @@ button {
                 margin-right: -15px;
                 width: calc(100% + 30px);
                 align-items: center;
+                position: relative;
 
                 .trans-col {
                     font-size: 20px;
@@ -1358,7 +1769,6 @@ button {
                         &.expenses {
                             color: $font-color-10;
                         }
-
                     }
 
                     &:nth-child(3) {
@@ -1376,6 +1786,12 @@ button {
                     &:nth-child(6) {
                         width: 18%;
                     }
+                }
+
+                img.edit-btn {
+                    position: absolute;
+                    right: 15px;
+                    cursor: pointer;
                 }
             }
 
@@ -1400,5 +1816,337 @@ button {
                 }
             }
         }
+
+        .currency {
+            width: 1364px;
+            margin: 60px auto 100px auto;
+            background-color: $background-color-9;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+            padding-top: 15px;
+            padding-left: 30px;
+            padding-bottom: 5px;
+            padding-right: 30px;
+
+            .headers {
+                display: flex;
+                height: 85px;
+                background-color: $background-color-1;
+                border-radius: 15px;
+                align-items: center;
+                margin-left: -15px;
+                margin-right: -15px;
+                margin-bottom: 10px;
+                width: calc(100% + 30px);
+
+                .header {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $font-color-2;
+
+                    &:nth-child(1) {
+                        width: 18%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 22%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 20%;
+                    }
+
+                    &:nth-child(4) {
+                        width: 22%;
+                    }
+
+                    &:nth-child(5) {
+                        width: 18%;
+                    }
+                }
+            }
+
+            .transaction-row {
+                height: 145px;
+                display: flex;
+                margin-left: -15px;
+                margin-right: -15px;
+                width: calc(100% + 30px);
+                align-items: center;
+                position: relative;
+
+                .trans-col {
+                    font-size: 20px;
+                    color: $font-color-2;
+
+                    &:nth-child(1) {
+                        width: 18%;
+                        padding-left: 15px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 22%;
+                        font-weight: 600;
+
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        width: 20%;
+                        font-weight: 600;
+                    }
+
+                    &:nth-child(4) {
+                        width: 22%;
+                        font-weight: 500;
+
+                        span {
+                            font-size: 28px;
+                            padding-right: 8px;
+                        }
+
+                        &.increase {
+                            color: $font-color-11;
+                        }
+
+                        &.decrease {
+                            color: $font-color-10;
+                        }
+                    }
+
+
+                    &:nth-child(5) {
+                        width: 18%;
+                        font-weight: 500;
+
+                        span {
+                            font-size: 28px;
+                            padding-right: 8px;
+                        }
+
+                        &.increase {
+                            color: $font-color-11;
+                        }
+
+                        &.decrease {
+                            color: $font-color-10;
+                        }
+                    }
+                }
+            }
+        }
+
+        .report-btn {
+            margin-top: 50px;
+            margin-bottom: -10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: $font-color-2;
+
+            div {
+                width: 245px;
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                align-items: center;
+                border-radius: 24px;
+
+                &:nth-child(1) {
+                    z-index: 1;
+                    background-color: white;
+                }
+
+                &:nth-child(2) {
+                    background-color: $background-color-1;
+                    position: relative;
+                    left: -40px;
+                    z-index: 0;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        .targets-diagrams {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 58px;
+            margin-bottom: 60px;
+
+            &.width-min {
+                .diagram-box {
+                    height: 316px;
+                }
+            }
+
+            .diagram-box {
+                width: 444px;
+                height: 460px;
+                background-color: $background-color-9;
+                border-radius: 20px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+                position: relative;
+
+                .diagram-title {
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: $font-color-7;
+                    margin: 28px 0 0 26px;
+                }
+
+                .conditions {
+                    display: flex;
+                    margin-left: 30px;
+                    margin-top: 39px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 18px;
+                    align-items: center;
+                    font-weight: 500;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    p {
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .diagram {
+                    display: flex;
+                    margin-top: 40px;
+                    align-items: center;
+
+                    &.h-center {
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-top: 30px;
+
+                    }
+
+                    .circle {
+                        position: relative;
+                        margin-left: 26px;
+
+                        &.h-center {
+                            margin-left: 0;
+                        }
+
+                        .percent {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-45%, -55%);
+                            font-size: 23px;
+                            color: $font-color-2;
+                        }
+                    }
+
+                    .diagram-name {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-top: 16px;
+                    }
+
+                    .diagram-details {
+                        margin-left: 44px;
+
+                        .diagram-detail {
+                            font-size: 18px;
+                            color: $font-color-2;
+                            font-weight: 500;
+                            margin-bottom: 12px;
+
+
+                            span {
+                                font-weight: 400;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .legend {
+                    margin-top: 50px;
+                    margin-left: 25px;
+                    display: flex;
+                    align-items: flex-start;
+
+                    &.two-col {
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        height: 90px;
+                        margin-top: 35px;
+                        margin-right: 25px;
+
+                        .legend-row {
+                            margin-bottom: 14px;
+                            align-items: flex-start;
+                            width: 48%;
+
+                            .legend-text {
+                                margin-left: 12px;
+                            }
+                        }
+                    }
+
+                    .legend-row {
+                        display: flex;
+                        width: 50%;
+                        align-items: center;
+
+                        .legend-text {
+                            margin-left: 20px;
+                            font-size: 18px;
+                            color: $font-color-2;
+                        }
+                    }
+                }
+
+                .diagram-box-shadow {
+                    width: 444px;
+                    height: 460px;
+                    background-color: $background-color-11;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 0;
+                    opacity: 41%;
+                }
+
+                .ok-img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .diagram-container {
+            width: 1364px;
+            margin: 40px auto 100px auto;
+            background-color: $background-color-9;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-bottom: 40px;
+            padding-right: 30px;
+        }
     }
+
+    // hr {
+    //     border-top: 1px solid rgba($border-color-1, 20%);
+    //     margin-left: -30px;
+    //     margin-right: -30px;
+    //     width: calc(100% + 60px);
+    // }
 }

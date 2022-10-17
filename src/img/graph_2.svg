@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="164.136" height="147" viewBox="0 0 164.136 147">
+  <g id="Group_6212" data-name="Group 6212" transform="translate(-901.883 -1338.162)">
+    <line id="Line_110" data-name="Line 110" x2="95.39" transform="translate(970.629 1381.82)" fill="none" stroke="#cdd0db" stroke-width="1"/>
+    <line id="Line_112" data-name="Line 112" x2="95.39" transform="translate(970.629 1350.322)" fill="none" stroke="#cdd0db" stroke-width="1"/>
+    <line id="Line_109" data-name="Line 109" x2="95.39" transform="translate(970.629 1444.816)" fill="none" stroke="#cdd0db" stroke-width="1"/>
+    <line id="Line_113" data-name="Line 113" x2="95.39" transform="translate(970.629 1476.314)" fill="none" stroke="#cdd0db" stroke-width="1"/>
+    <line id="Line_111" data-name="Line 111" x2="95.39" transform="translate(970.629 1413.318)" fill="none" stroke="#cdd0db" stroke-width="1"/>
+    <rect id="Rectangle_678" data-name="Rectangle 678" width="81" height="15.346" transform="translate(977.824 1444.816)" fill="#9a5353"/>
+    <text id="_0_zł" data-name="0 zł" transform="translate(956.883 1448.162)" fill="#43475d" font-size="15" font-family="Poppins-Regular, Poppins"><tspan x="-24.015" y="0">0 zł</tspan></text>
+    <text id="_-_100_zł" data-name="- 100  zł" transform="translate(956.883 1480.162)" fill="#43475d" font-size="15" font-family="Poppins-Regular, Poppins"><tspan x="-54.51" y="0" xml:space="preserve">- 100  zł</tspan></text>
+    <text id="_100_zł" data-name="100 zł" transform="translate(956.883 1417.162)" fill="#43475d" font-size="15" font-family="Poppins-Regular, Poppins"><tspan x="-38.235" y="0">100 zł</tspan></text>
+    <text id="_200_zł_" data-name="200 zł " transform="translate(960.883 1386.162)" fill="#43475d" font-size="15" font-family="Poppins-Regular, Poppins"><tspan x="-46.065" y="0">200 zł </tspan></text>
+    <text id="_300_zł_" data-name="300 zł " transform="translate(960.883 1354.162)" fill="#43475d" font-size="15" font-family="Poppins-Regular, Poppins"><tspan x="-46.275" y="0">300 zł </tspan></text>
+    <g id="Group_6193" data-name="Group 6193" transform="translate(494.121 52.416)">
+      <text id="_-_30_zł" data-name="- 30 zł" transform="translate(492.702 1385.4)" fill="red" font-size="21" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">- 30 zł</tspan></text>
+    </g>
+  </g>
+</svg>

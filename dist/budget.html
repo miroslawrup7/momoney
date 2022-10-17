@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1665317051541" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666031032975" />
 
     <title>MoMoney</title>
 </head>
@@ -25,33 +25,42 @@
                 </div>
                 <div class="menu">
                     <a href="./budget.html">
-                        <div class="menu-item active">
-                            <img src="./img/target2.svg" alt="target2">
+                        <div class="menu-item budget active">
                             <p>Budżet</p>
+                            <div class="bar"></div>
                         </div>
+
                     </a>
                     <a href="./accounts.html">
-                        <div class="menu-item">
-                            <img src="./img/bank.svg" alt="bank">
+                        <div class="menu-item accounts">
                             <p>Konta</p>
+                            <div class="bar"></div>
                         </div>
                     </a>
-                    <div class="menu-item">
-                        <img src="./img/transaction.svg" alt="transaction">
-                        <p>Transakcje</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="./img/target3.svg" alt="target3">
-                        <p>Cele</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="./img/report.svg" alt="report">
-                        <p>Raporty</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="./img/currency2.svg" alt="currency2">
-                        <p>Kurs Walut</p>
-                    </div>
+                    <a href="./transactions.html">
+                        <div class="menu-item transactions">
+                            <p>Transakcje</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./targets.html">
+                        <div class="menu-item targets">
+                            <p>Cele</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./reports.html">
+                        <div class="menu-item reports">
+                            <p>Raporty</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./currency.html">
+                        <div class="menu-item currency">
+                            <p>Kurs Walut</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="balance">
                     <div class="balance-title">
@@ -73,21 +82,47 @@
                 <div class="main-content">
                     <div class="title">
                         <h2>Budżet</h2>
+                        <img class="dots" src="./img/dots.svg" alt="dots">
+                        <div class="menu-popup">
+                            <div class="menu-row">
+                                <img src="./img/plus.svg" alt="plus">
+                                Dodaj nowy budżet
+                            </div>
+                            <div class="menu-row">
+                                <img src="./img/pencil.svg" alt="pencil">
+                                Edytuj budżet
+                            </div>
+                            <div class="menu-row">
+                                <img src="./img/share.svg" alt="share">
+                                Udostępnij budżet
+                            </div>
+                        </div>
                     </div>
                     <div class="filter">
                         <div class="budgets">
                             <p>Budżet:</p>
-                            <div class="budget-list">
-                                <p>Budżet osobisty</p>
-                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            <div class="custom-list-1">
+                                <select>
+                                    <option value="1">Budżet osobisty</option>
+                                    <option value="2">Budżet 2</option>
+                                    <option value="3">Budżet 3</option>
+                                    <option value="4">Budżet 4</option>
+                                    <option value="5">Budżet 5</option>
+                                </select>
                             </div>
                         </div>
                         <div class="dates">
                             <p>Okres czasu:</p>
-                            <div class="years">
-                                <p>2022</p>
-                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            <div class="custom-list-1">
+                                <select>
+                                    <option value="1">2022</option>
+                                    <option value="2">2023</option>
+                                    <option value="3">2024</option>
+                                    <option value="4">2025</option>
+                                    <option value="5">2026</option>
+                                </select>
                             </div>
+
                             <div class="months">
                                 <div class="jan">sty</div>
                                 <div class="feb">lut</div>
@@ -220,6 +255,7 @@
                                     </div>
                                     <div class="button">
                                         <img src="./img/ok.svg" alt="ok">
+                                        <div class="tooltip">Potwierdź wpływ</div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -231,6 +267,7 @@
                                     </div>
                                     <div class="button active">
                                         <img src="./img/ok.svg" alt="ok">
+                                        <div class="tooltip">Potwierdź wpływ</div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -242,6 +279,7 @@
                                     </div>
                                     <div class="button">
                                         <img src="./img/ok.svg" alt="ok">
+                                        <div class="tooltip">Potwierdź wpływ</div>
                                     </div>
                                 </div>
                             </div>
@@ -353,7 +391,7 @@
                                         <div class="cell">2000 zł</div>
                                         <div class="cell">500 zł</div>
                                         <div class="cell">1500 zł</div>
-                                        <div class="cell"><img src="./img/arrow-up.svg" alt="arrow-up"></div>
+                                        <div class="cell"></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -377,7 +415,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=1665317051541"></script>
+    <script src="./js/all.min.js?cache_bust=1666031032975"></script>
 </body>
 
 </html>

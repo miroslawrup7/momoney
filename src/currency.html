@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=123" />
+
+    <title>MoMoney</title>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-menu">
+                <div class="logo">
+                    <img src="./img/logo2.svg" alt="logo">
+                </div>
+                <div class="arrow">
+                    <img src="./img/arrow-left.svg" alt="arrow-left">
+                </div>
+                <div class="menu">
+                    <a href="./budget.html">
+                        <div class="menu-item budget">
+                            <p>Budżet</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./accounts.html">
+                        <div class="menu-item accounts">
+                            <p>Konta</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./transactions.html">
+                        <div class="menu-item transactions">
+                            <p>Transakcje</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./targets.html">
+                        <div class="menu-item targets">
+                            <p>Cele</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./reports.html">
+                        <div class="menu-item reports">
+                            <p>Raporty</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./currency.html">
+                        <div class="menu-item currency active">
+                            <p>Kurs Walut</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="balance">
+                    <div class="balance-title">
+                        <img src="./img/cash.svg" alt="cash">
+                        <p>Stan kont</p>
+                    </div>
+                    <p>Domowe: <span>25 000 zł</span></p>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="top-menu">
+                    <img src="./img/user.svg" alt="user">
+                    <img src="./img/notification.svg" alt="notification">
+                    <img src="./img//messages.svg" alt="messages">
+                    <img src="./img/settings.svg" alt="settings">
+                    <img src="./img/help.svg" alt="help">
+                    <img src="./img/logout.svg" alt="logout">
+                </div>
+                <div class="main-content">
+                    <div class="title">
+                        <h2>Kurs walut</h2>
+                    </div>
+                    <p class="info">Przedstawione poniżej dane są aktualizowane na bieżąco zgodnie z XYZ<br>
+                        Ostatnia data aktualizacji: 12.09.2022 godzina 12:24
+                    </p>
+
+                    <div class="currency">
+                        <div class="headers">
+                            <div class="header"></div>
+                            <div class="header">Waluta</div>
+                            <div class="header">Kurs</div>
+                            <div class="header">Zmiana</div>
+                            <div class="header">Zmiana(zł)</div>
+                        </div>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/eur.svg" alt="eur"></div>
+                            <div class="trans-col">
+                                EUR<br>
+                                <span>Euro</span>
+                            </div>
+                            <div class="trans-col">4,7113</div>
+                            <div class="trans-col increase">
+                                <span>&uarr;</span>
+                                0,03%
+                            </div>
+                            <div class="trans-col increase">
+                                <span>&uarr;</span>
+                                0,0015 zł
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/usd.svg" alt="usd"></div>
+                            <div class="trans-col">
+                                USD<br>
+                                <span>Dolar amerykański</span>
+                            </div>
+                            <div class="trans-col">4,6225</div>
+                            <div class="trans-col decrease">
+                                <span>&darr;</span>
+                                0,80%
+                            </div>
+                            <div class="trans-col decrease">
+                                <span>&darr;</span>
+                                0,0374 zł
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/gbp.svg" alt="gbp"></div>
+                            <div class="trans-col">
+                                GBP<br>
+                                <span>Funt brytyjski</span>
+                            </div>
+                            <div class="trans-col">5,4044</div>
+                            <div class="trans-col decrease">
+                                <span>&darr;</span>
+                                0,26%
+                            </div>
+                            <div class="trans-col decrease">
+                                <span>&darr;</span>
+                                0,0141 zł
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/chf.svg" alt="chf"></div>
+                            <div class="trans-col">
+                                CHF<br>
+                                <span>Frank szwajcarski</span>
+                            </div>
+                            <div class="trans-col">4,8428</div>
+                            <div class="trans-col decrease">
+                                <span>&darr;</span>
+                                0,54%
+                            </div>
+                            <div class="trans-col decrease">
+                                <span>&darr;</span>
+                                0,0265 zł
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="./js/all.min.js?cache_bust=123"></script>
+</body>
+
+</html>

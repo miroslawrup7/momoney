@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=123" />
+
+    <title>MoMoney</title>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-menu">
+                <div class="logo">
+                    <img src="./img/logo2.svg" alt="logo">
+                </div>
+                <div class="arrow">
+                    <img src="./img/arrow-left.svg" alt="arrow-left">
+                </div>
+                <div class="menu">
+                    <a href="./budget.html">
+                        <div class="menu-item budget">
+                            <p>Budżet</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./accounts.html">
+                        <div class="menu-item accounts">
+                            <p>Konta</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./transactions.html">
+                        <div class="menu-item transactions active">
+                            <p>Transakcje</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./targets.html">
+                        <div class="menu-item targets">
+                            <p>Cele</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./reports.html">
+                        <div class="menu-item reports">
+                            <p>Raporty</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                    <a href="./currency.html">
+                        <div class="menu-item currency">
+                            <p>Kurs Walut</p>
+                            <div class="bar"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="balance">
+                    <div class="balance-title">
+                        <img src="./img/cash.svg" alt="cash">
+                        <p>Stan kont</p>
+                    </div>
+                    <p>Domowe: <span>25 000 zł</span></p>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="top-menu">
+                    <img src="./img/user.svg" alt="user">
+                    <img src="./img/notification.svg" alt="notification">
+                    <img src="./img//messages.svg" alt="messages">
+                    <img src="./img/settings.svg" alt="settings">
+                    <img src="./img/help.svg" alt="help">
+                    <img src="./img/logout.svg" alt="logout">
+                </div>
+                <div class="main-content">
+                    <div class="title">
+                        <h2>Transakcje</h2>
+                        <div class="buttons no-margin">
+                            <div class="button">
+                                <img src="./img/refresh2.svg" alt="refresh">
+                                <p>Odśwież synchronizację</p>
+                            </div>
+                            <div class="button">
+                                <img src="./img/download.svg" alt="download">
+                                <p>Importuj</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter">
+                        <div class="budgets">
+                            <p>Budżet:</p>
+                            <div class="budget-list">
+                                <p>Budżet osobisty</p>
+                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="add-transaction">
+                        <div class="box-title">Dodawanie transakcji</div>
+                        <div class="rows">
+                            <div class="row">
+                                <div class="form-elem">
+                                    <label>Konto:
+                                        <select>
+                                            <option value="" disabled selected>Wybierz konto</option>
+                                            <option value="1">Konto 1</option>
+                                            <option value="2">Konto 2</option>
+                                            <option value="3">Konto 3</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form-elem double">
+                                    <label>Kwota:
+                                        <input type="text" placeholder="Wpisz kwotę">
+                                        <select>
+                                            <option value="pln">PLN</option>
+                                            <option value="eur">EUR</option>
+                                            <option value="gbp">GBP</option>
+                                            <option value="usd">USD</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form-elem">
+                                    <label>Odbiorca:
+                                        <input type="text" placeholder="Wpisz nazwę">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-elem">
+                                    <label class="date">Data:
+                                        <input type="text" required pattern="\d{2}.d{2}.\d{4}"
+                                            placeholder="Wybierz datę transakcji" onfocus="(this.type='date')">
+                                        <img src="./img/calendar.svg" alt="calendar">
+                                    </label>
+
+                                </div>
+                                <div class="form-elem">
+                                    <label>Kategoria:
+                                        <select>
+                                            <option value="" disabled selected>Wybierz kategorię</option>
+                                            <option value="1">Kategoria 1</option>
+                                            <option value="2">Kategoria 2</option>
+                                            <option value="3">Kategoria 3</option>
+                                        </select>
+                                    </label>
+
+                                </div>
+                                <div class="form-elem">
+                                    <label>Komentarz:
+                                        <input type="text" placeholder="Dodaj komentarz">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-buttons">
+                            <a class="cancel-add" href="#">Anuluj dodawanie</a>
+                            <a class="btn add" href="#">Dodaj transakcję</a>
+                        </div>
+                    </div>
+
+                    <div class="account-history">
+                        <div class="box-title">Historia transakcji</div>
+                        <div class="headers">
+                            <div class="header"></div>
+                            <div class="header">Kwota</div>
+                            <div class="header">Konto</div>
+                            <div class="header">Odbiorca</div>
+                            <div class="header">Kategoria</div>
+                            <div class="header">Komentarz</div>
+                        </div>
+                        <div class="date-bar">Piątek 09.10.2002</div>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-24,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">ParZona Cafe</div>
+                            <div class="trans-col">Żywność</div>
+                            <div class="trans-col">Śniadanie</div>
+                            <img class="edit-btn" src="./img/edit.svg" alt="edit">
+
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-68,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Falla</div>
+                            <div class="trans-col">Żywność</div>
+                            <div class="trans-col">Brak</div>
+                            <img class="edit-btn" src="./img/edit.svg" alt="edit">
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-350,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Orlen</div>
+                            <div class="trans-col">Transport</div>
+                            <div class="trans-col">Brak</div>
+                            <img class="edit-btn" src="./img/edit.svg" alt="edit">
+                        </div>
+                        <div class="date-bar">Środa 07.10.2002</div>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/receipts.svg" alt="receipts"></div>
+                            <div class="trans-col receipts">+468,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Adrianna Nowak</div>
+                            <div class="trans-col">Mieszkanie</div>
+                            <div class="trans-col">Rachunki</div>
+                            <img class="edit-btn" src="./img/edit.svg" alt="edit">
+                        </div>
+                        <hr>
+                        <div class="transaction-row">
+                            <div class="trans-col"><img src="./img/expenses.svg" alt="expenses"></div>
+                            <div class="trans-col expenses">-150,00 zł</div>
+                            <div class="trans-col">Domowe</div>
+                            <div class="trans-col">Vitasport</div>
+                            <div class="trans-col">Zdrowie</div>
+                            <div class="trans-col">Rehabilitacja</div>
+                            <img class="edit-btn" src="./img/edit.svg" alt="edit">
+                        </div>
+                        <hr>
+                        <div class="see-more">
+                            Pokaż więcej <img src="./img/arrow-down3.svg" alt="arrow-down">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="./js/all.min.js?cache_bust=123"></script>
+</body>
+
+</html>
