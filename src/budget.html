@@ -79,12 +79,12 @@
                     <img src="./img/help.svg" alt="help">
                     <img src="./img/logout.svg" alt="logout">
                 </div>
-                <div class="main-content">
+                <div class="main-content budget-page">
                     <div class="title">
                         <h2>Budżet</h2>
                         <img class="dots" src="./img/dots.svg" alt="dots">
                         <div class="menu-popup">
-                            <div class="menu-row">
+                            <div class="menu-row add-new-budget">
                                 <img src="./img/plus.svg" alt="plus">
                                 Dodaj nowy budżet
                             </div>
@@ -97,7 +97,39 @@
                                 Udostępnij budżet
                             </div>
                         </div>
+
+                        <!-- popup add new budget -->
+                        <div class="new-budget-popup">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie nowego budżetu</div>
+                                <div class="custom-input-1">
+                                    <label>Nazwa: </label>
+                                    <input type="text" placeholder="Wpisz nazwę budżetu">
+                                </div>
+
+                                <div class="custom-list-2">
+                                    <label>Konto: </label>
+                                    <select>
+                                        <option value="">Wybierz konto dotyczące budżetu</option>
+                                        <option value="1">Konto 1</option>
+                                        <option value="2">Konto 2</option>
+                                        <option value="3">Konto 3</option>
+                                        <option value="4">Konto 4</option>
+                                    </select>
+                                </div>
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Anuluj akcję</a>
+                                    <a class="add-btn btn">Dodaj budżet</a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                     <div class="filter">
                         <div class="budgets">
                             <p>Budżet:</p>
@@ -139,6 +171,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="budget-diagrams">
                         <div class="diagram-box">
                             <div class="diagram-title">Plan budżetu</div>
@@ -213,10 +246,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="budget-summary">
                         <div class="box-title">Podsumowanie budżetu</div>
 
                         <div class="box-subtitle">Wpływy</div>
+
                         <div class="boxes">
                             <div class="box">
                                 <p class="def">Planowana kwota wpływów:</p>
@@ -227,8 +262,9 @@
                                 <p class="value">11000 zł</p>
                             </div>
                         </div>
+
                         <div class="buttons">
-                            <div class="button">
+                            <div class="button add-new-revenue">
                                 <img src="./img/plus.svg" alt="plus">
                                 <p>Dodaj nowy wpływ</p>
                             </div>
@@ -236,7 +272,65 @@
                                 <img src="./img/pencil.svg" alt="pencil">
                                 <p>Edytuj wpływy</p>
                             </div>
+
+                            <!-- popup add new revenue -->
+                            <div class="new-revenue-popup">
+                                <div class="popup-container">
+                                    <div class="title">Dodawanie wpływu</div>
+                                    <div class="radios">
+                                        <label>Rodzaj wpływu:</label>
+                                        <label class="radio-container">Jednorazowy
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Regularny
+                                            <input type="radio" name="radio">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-list-2">
+                                        <label>Konto: </label>
+                                        <select>
+                                            <option value="">Wybierz konto</option>
+                                            <option value="1">Konto 1</option>
+                                            <option value="2">Konto 2</option>
+                                            <option value="3">Konto 3</option>
+                                            <option value="4">Konto 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="custom-input-and-select-2">
+                                        <label>Kwota:</label>
+                                        <input type="text" placeholder="Podaj kwotę wpływu">
+                                        <select>
+                                            <option value="pln">PLN</option>
+                                            <option value="eur">EUR</option>
+                                            <option value="gbp">GBP</option>
+                                            <option value="usd">USD</option>
+                                        </select>
+                                    </div>
+                                    <div class="custom-input-date-2">
+                                        <label>Data: </label>
+                                        <input type="text" placeholder="Wybierz datę transakcji"
+                                            onfocus="(this.type='date')">
+                                    </div>
+                                    <div class="custom-input-1">
+                                        <label>Nazwa: </label>
+                                        <input type="text" placeholder="Wpisz nazwę wpływu">
+                                    </div>
+
+                                    <div class="popup-buttons">
+                                        <a class="cancel-btn">Anuluj akcję</a>
+                                        <a class="add-btn btn">Dodaj wpływ </a>
+                                    </div>
+
+                                    <div class="close-btn">
+                                        <img src="./img/close.svg" alt="close">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
                         <div class="table-revenue">
                             <div class="table-heads">
                                 <div class="table-head">Nazwa wpływu</div>
@@ -297,11 +391,12 @@
                                 <img src="./img/plus.svg" alt="plus">
                                 <p>Dodaj nowy kategorię</p>
                             </div>
-                            <div class="button">
+                            <div class="button edit-cat-btn">
                                 <img src="./img/pencil.svg" alt="pencil">
                                 <p>Edytuj kategorie</p>
                             </div>
                         </div>
+
                         <div class="table-expenses">
                             <div class="table-heads">
                                 <div class="table-head">Priorytet</div>
@@ -315,7 +410,10 @@
                                 <div class="row">
                                     <div class="point">1</div>
                                     <div class="data width_1">
-                                        <div class="cell">Kredyty</div>
+                                        <div class="cell">
+                                            Kredyty
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">4300 zł</div>
                                         <div class="cell">1892 zł</div>
                                         <div class="cell">2408 zł</div>
@@ -323,92 +421,144 @@
                                             <img src="./img/arrow-up.svg" alt="arrow-up">
                                         </div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row sub">
                                     <div class="point">1</div>
                                     <div class="data width_2">
-                                        <div class="cell">Hipoteczny</div>
-                                        <div class="cell">2500 zł</div>
+                                        <div class="cell">Hipoteczny
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">2500 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">1000 zł</div>
                                         <div class="cell">1500 zł</div>
                                         <div class="cell"></div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row sub">
                                     <div class="point">2</div>
                                     <div class="data width_3">
-                                        <div class="cell">Chwilówka</div>
-                                        <div class="cell">1800 zł</div>
+                                        <div class="cell">Chwilówka
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">1800 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">892 zł</div>
                                         <div class="cell">908 zł</div>
                                         <div class="cell"></div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row">
                                     <div class="point">2</div>
                                     <div class="data width_4">
-                                        <div class="cell">Mieszkanie</div>
-                                        <div class="cell">2600 zł</div>
+                                        <div class="cell">Mieszkanie
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">2600 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">2600 zł</div>
                                         <div class="cell">0 zł</div>
                                         <div class="cell"></div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row">
                                     <div class="point">3</div>
                                     <div class="data width_5">
-                                        <div class="cell">Żywność</div>
-                                        <div class="cell">1200 zł</div>
+                                        <div class="cell">Żywność
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">1200 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">906 zł</div>
                                         <div class="cell">294 zł</div>
-                                        <div class="cell"><img src="./img/arrow-down3.svg" alt="arrow-down"></div>
+                                        <div class="cell">
+                                            <img src="./img/arrow-down3.svg" alt="arrow-down">
+                                        </div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row">
                                     <div class="point">4</div>
                                     <div class="data width_6">
-                                        <div class="cell">Transport</div>
-                                        <div class="cell">900 zł</div>
+                                        <div class="cell">Transport
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">900 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">300 zł</div>
                                         <div class="cell">600 zł</div>
-                                        <div class="cell"><img src="./img/arrow-down3.svg" alt="arrow-down"></div>
+                                        <div class="cell">
+                                            <img src="./img/arrow-down3.svg" alt="arrow-down">
+                                        </div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row">
                                     <div class="point">5</div>
                                     <div class="data width_7">
-                                        <div class="cell">Moje cele</div>
+                                        <div class="cell">Moje cele
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">2000 zł</div>
                                         <div class="cell">500 zł</div>
                                         <div class="cell">1500 zł</div>
-                                        <div class="cell"><img src="./img/arrow-down3.svg" alt="arrow-down"></div>
+                                        <div class="cell">
+                                            <img src="./img/arrow-up.svg" alt="arrow-up">
+                                        </div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row sub">
                                     <div class="point">1</div>
                                     <div class="data width_8">
-                                        <div class="cell">Wakacje w Patagonii</div>
-                                        <div class="cell">2000 zł</div>
+                                        <div class="cell">Wakacje w Patagonii
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">2000 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">500 zł</div>
                                         <div class="cell">1500 zł</div>
                                         <div class="cell"></div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
                                 <div class="row">
                                     <div class="point">6</div>
                                     <div class="data width_9">
-                                        <div class="cell">Moje limity: używki</div>
-                                        <div class="cell">1000 zł</div>
+                                        <div class="cell">Moje limity: używki
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
+                                        <div class="cell">1000 zł
+                                            <img src="./img/pencil2.svg" alt="pencil">
+                                        </div>
                                         <div class="cell">500 zł</div>
                                         <div class="cell">1500 zł</div>
                                         <div class="cell"><img src="./img/arrow-down3.svg" alt="arrow-down"></div>
                                     </div>
+                                    <img class="bin" src="./img/bin.svg" alt="bin">
                                 </div>
+                            </div>
+                            <div class="yes-no-buttons">
+                                <a class="cancel-add">Odrzuć zmiany</a>
+                                <a class="btn add">Zapisz zmiany</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <div class="right-content-cover"></div>
             </div>
+
         </div>
     </main>
 
