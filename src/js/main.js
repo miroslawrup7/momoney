@@ -1,3 +1,31 @@
+const getOffsetTop = (elem)=> {
+
+	let distance = 0;
+
+	if (elem.offsetParent) {
+		do {
+			distance += elem.offsetTop;
+			elem = elem.offsetParent;
+		} while (elem);
+	}
+
+	return distance < 0 ? 0 : distance;
+};
+
+const getOffsetLeft = (elem)=> {
+
+	let distance = 0;
+
+	if (elem.offsetParent) {
+		do {
+			distance += elem.offsetLeft;
+			elem = elem.offsetParent;
+		} while (elem);
+	}
+
+	return distance < 0 ? 0 : distance;
+};
+
 // lang and currency switch
 
 const currencyLoc_1 = document.querySelector(".form-elem_1 select");
@@ -125,17 +153,20 @@ if (budgetPageLoc) {
     const noButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons .cancel-add")
     const yesButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons .btn.add")
     
+    const delCatPopupLoc = document.querySelector(".del-cat-popup")
+    const delCatPopupCloseLoc = document.querySelector(".del-cat-popup .close-btn")
+
     editCategoryBtnLoc.addEventListener("click", ()=>{
         pencilesLoc1.forEach((elem)=>{
-            elem.classList.toggle("active");
+            elem.classList.add("active");
         })
         pencilesLoc2.forEach((elem)=>{
-            elem.classList.toggle("active");
+            elem.classList.add("active");
         })
         binsLoc.forEach((elem)=>{
-            elem.classList.toggle("active");
+            elem.classList.add("active");
         })
-        yesNoButtonsLoc.classList.toggle("active");
+        yesNoButtonsLoc.classList.add("active");
     })
 
     noButtonsLoc.addEventListener("click", ()=>{
@@ -149,6 +180,7 @@ if (budgetPageLoc) {
             elem.classList.remove("active");
         })
         yesNoButtonsLoc.classList.remove("active");
+        delCatPopupLoc.classList.remove("active");
     })
 
     yesButtonsLoc.addEventListener("click", ()=>{
@@ -162,5 +194,43 @@ if (budgetPageLoc) {
             elem.classList.remove("active");
         })
         yesNoButtonsLoc.classList.remove("active");
+        delCatPopupLoc.classList.remove("active");
+    })
+
+    binsLoc.forEach((elem)=>{
+        elem.addEventListener("click", (e)=>{
+
+            let elem = e.target;
+            let offsetTop = getOffsetTop(elem);
+            let offsetLeft = getOffsetLeft(elem);
+
+            delCatPopupLoc.classList.add("active");
+            delCatPopupLoc.style.top = `${offsetTop}px`;
+            delCatPopupLoc.style.left = `${offsetLeft - 600}px`;
+
+        })
+    })
+
+    delCatPopupCloseLoc.addEventListener("click", ()=>{
+        delCatPopupLoc.classList.remove("active");
+    })
+
+     //  budget toutorial
+    const tutorialPopupLoc = document.querySelector(".popup-with-arrow");
+
+    const tutorialOffLoc = document.querySelector(".popup-with-arrow .cancel-btn");
+    tutorialOffLoc.addEventListener("click", ()=>{
+        tutorialPopupLoc.classList.add("inactive")
+    })
+
+    const tutorialNextLoc = document.querySelector(".popup-with-arrow .add-btn");
+    tutorialNextLoc.addEventListener("click", ()=>{
+        tutorialPopupLoc.classList.add("inactive")
+    })
+
+    const tutorialCloseLoc = document.querySelector(".popup-with-arrow .close-btn");
+    tutorialCloseLoc.addEventListener("click", ()=>{
+        tutorialPopupLoc.classList.add("inactive")
     })
 }
+

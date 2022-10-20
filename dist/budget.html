@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666206189689" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666278889120" />
 
     <title>MoMoney</title>
 </head>
@@ -126,6 +126,34 @@
                                     <img src="./img/close.svg" alt="close">
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- popup with arrow -->
+                        <div class="popup-with-arrow">
+                            <div class="popup-container">
+                                <div class="title">Budżety</div>
+                                <div class="info">
+                                    To tutaj znajdziesz podsumowanie Twojego budżetu i wszystkie najważniejsze
+                                    informacje, którego jego
+                                    dotyczą. Dodaj, edytuj lub udostępnij swój budżet. Planuj wpływy i wydatki oraz
+                                    stwórz swoją
+                                    indywidualną hierarchię budżetu.
+                                </div>
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Pomiń wprowadzenie</a>
+                                    <a class="add-btn btn">Dalej </a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+
+                            <div class="arrow-wrap">
+                                <div class="arrow"></div>
+
+                            </div>
+                            <div class="arrow-cover"></div>
                         </div>
 
                     </div>
@@ -545,7 +573,13 @@
                                         <div class="cell">1500 zł</div>
                                         <div class="cell"><img src="./img/arrow-down3.svg" alt="arrow-down"></div>
                                     </div>
-                                    <img class="bin" src="./img/bin.svg" alt="bin">
+                                    <div class="bin">
+                                        <img src="./img/bin.svg" alt="bin">
+
+
+
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="yes-no-buttons">
@@ -565,7 +599,33 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=1666206189689"></script>
+    <!-- popup delete-category expenses -->
+    <div class="del-cat-popup">
+        <div class="popup-container">
+            <div class="title">Usuń kategorię</div>
+            <div class="info">
+                Zanim usuniesz kategorię Kredyty, musisz ponownie przypisać swoją przeszłą aktywność
+                do nowej kategorii.
+            </div>
+            <div class="custom-list-2">
+                <label></label>
+
+                <select>
+                    <option value="">Wybierz kategorię</option>
+                    <option value="1">Kategoria 1</option>
+                    <option value="2">Kategoria 2</option>
+                    <option value="3">Kategoria 3</option>
+                    <option value="4">Kategoria 4</option>
+                </select>
+            </div>
+
+            <div class="close-btn">
+                <img src="./img/close.svg" alt="close">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/all.min.js?cache_bust=1666278889120"></script>
 </body>
 
 </html>

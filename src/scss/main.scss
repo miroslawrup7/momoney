@@ -168,6 +168,9 @@ $border-color-4: #64C689;
 
         .popup-buttons {
             display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 50px 0;
         }
 
         .close-btn {
@@ -175,6 +178,9 @@ $border-color-4: #64C689;
             top: 28px;
             right: 24px;
             cursor: pointer;
+            color: #64c689;
+            font-size: 20px;
+            font-weight: 600;
         }
     }
 }
@@ -2462,19 +2468,15 @@ a {
 .new-budget-popup {
     @extend %popup;
     width: 570px;
-    display: none;
     top: 100px;
     left: 0;
+    display: none;
 
     &.active {
         display: block;
     }
 
     .popup-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin: 50px 0;
 
         .cancel-btn {
             color: #64c689;
@@ -2501,6 +2503,7 @@ a {
     }
 
     .radios {
+        // do zrobienia jako standard z extended
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -2511,10 +2514,8 @@ a {
             font-weight: 500;
         }
 
-
         .radio-container {
             display: flex;
-
             align-items: center;
             margin: 0;
             margin-right: 10px;
@@ -2528,10 +2529,6 @@ a {
     }
 
     .popup-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin: 50px 0;
 
         .cancel-btn {
             color: #64c689;
@@ -2540,9 +2537,37 @@ a {
             cursor: pointer;
         }
 
+
         .add-btn {
             width: 300px;
         }
+    }
+}
+
+.del-cat-popup {
+    @extend %popup;
+    width: 570px;
+    display: none;
+    top: 50px;
+    left: 0;
+
+    &.active {
+        display: block;
+    }
+
+    .info {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .custom-list-2 {
+        width: 300px;
+
+        select {
+            margin-left: 0;
+        }
+
     }
 }
 
@@ -2562,5 +2587,82 @@ a {
     .btn.add {
         margin-left: 40px;
         cursor: pointer;
+    }
+}
+
+.popup-with-arrow {
+    @extend %popup;
+    width: 480px;
+    background-color: $background-color-1;
+    top: -8px;
+    left: 150px;
+    display: block;
+
+    &.inactive {
+        display: none;
+    }
+
+    .popup-container {
+        padding: 0 36px;
+
+        .title {
+            font-size: 20px;
+            color: $font-color-2;
+            margin: 0px;
+        }
+
+        .info {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 10px;
+            color: $font-color-2;
+        }
+
+        .popup-buttons {
+            justify-content: space-between;
+            margin: 32px 0;
+
+            .cancel-btn {
+                color: #64c689;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            .add-btn {
+                width: 166px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        .close-btn {
+            right: 18px;
+            top: 20px;
+        }
+    }
+
+    .arrow-wrap {
+        position: absolute;
+        top: 30px;
+        left: -26px;
+        filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .16));
+
+        .arrow {
+            width: 30px;
+            height: 50px;
+            clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+            background-color: $background-color-1;
+        }
+    }
+
+    .arrow-cover {
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        width: 30px;
+        height: 60px;
+
+        background-color: $background-color-1;
     }
 }
