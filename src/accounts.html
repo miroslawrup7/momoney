@@ -78,21 +78,26 @@
                     <img src="./img/help.svg" alt="help">
                     <img src="./img/logout.svg" alt="logout">
                 </div>
-                <div class="main-content">
+                <div class="main-content accounts-page">
                     <div class="title">
                         <h2>Konta</h2>
                     </div>
                     <div class="filter">
                         <div class="budgets">
                             <p>Konto:</p>
-                            <div class="budget-list">
-                                <p>Konto osobiste</p>
-                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            <div class="custom-list-1">
+                                <select>
+                                    <option value="1">Wybierz konto </option>
+                                    <option value="2">Konto 1</option>
+                                    <option value="3">Konto 2</option>
+                                    <option value="4">Konto 3</option>
+                                    <option value="5">Konto 4</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                     <div class="buttons margin-big">
-                        <div class="button">
+                        <div class="button add-new-account">
                             <img src="./img/plus.svg" alt="plus">
                             <p>Dodaj nowe konto</p>
                         </div>
@@ -108,6 +113,146 @@
                             <img src="./img/delete.svg" alt="delete">
                             <p>Usuń konto</p>
                         </div>
+
+                        <!-- popup add new account -->
+                        <div class="new-account-popup">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie konta</div>
+                                <div class="radios">
+                                    <label class="radio-container">Konto synchronizowane
+                                        <input type="radio" checked="checked" name="radio" id="sync-acc">
+                                        <span class="radio-checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Konto niesynchronizowane
+                                        <input type="radio" name="radio" id="non-sync-acc">
+                                        <span class="radio-checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Anuluj akcję</a>
+                                    <a class="add-btn btn">Dalej</a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- popup add new sync account -->
+                        <div class="new-sync-account-popup">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie konta</div>
+                                <div class="radios">
+                                    <label>Typ konta:</label>
+                                    <div class="radios-wrapper">
+                                        <label class="radio-container">Rachunek rozliczeniowo-oszczędnościowy
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Konto oszczędnościowe
+                                            <input type="radio" name="radio">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Gotówka
+                                            <input type="radio" name="radio">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Prepaid
+                                            <input type="radio" name="radio">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="custom-input-and-select-2">
+                                    <label>Stan konta:</label>
+                                    <input type="text" placeholder="Podaj stan konta">
+                                    <select>
+                                        <option value="pln">PLN</option>
+                                        <option value="eur">EUR</option>
+                                        <option value="gbp">GBP</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                </div>
+                                <div class="custom-input-1">
+                                    <label>Nazwa konta: </label>
+                                    <input type="text" placeholder="Wpisz nazwę konta">
+                                </div>
+
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Anuluj akcję</a>
+                                    <a class="add-btn btn">Dodaj konto </a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- popup add new NON sync account -->
+                        <div class="new-non-sync-account-popup">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie konta</div>
+                                <div class="custom-list-2">
+                                    <label>Bank: </label>
+                                    <select>
+                                        <option value="">Wybierz bank</option>
+                                        <option value="1">Bank 1</option>
+                                        <option value="2">Bank 2</option>
+                                        <option value="3">Bank 3</option>
+                                        <option value="4">Bank 4</option>
+                                    </select>
+                                </div>
+
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Anuluj akcję</a>
+                                    <a class="add-btn btn">Dodaj konto </a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="custom-list-2">
+                            <label>Konto: </label>
+                            <select>
+                                <option value="">Wybierz konto</option>
+                                <option value="1">Konto 1</option>
+                                <option value="2">Konto 2</option>
+                                <option value="3">Konto 3</option>
+                                <option value="4">Konto 4</option>
+                            </select>
+                        </div>
+
+                        <div class="popup-with-arrow-accounts-1">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie konta</div>
+                                <div class="info">
+                                    Dodaj konta jakie posiadasz. Będą one podpinane pod wszystkie utworzone w
+                                    przyszłości budżety oraz transakcje.
+                                </div>
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Pomiń wprowadzenie</a>
+                                    <a class="add-btn btn">Dalej </a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+
+                            <div class="arrow-wrap">
+                                <div class="arrow"></div>
+
+                            </div>
+                            <div class="arrow-cover"></div>
+                        </div>
+
                     </div>
 
                     <div class="account-summary">
@@ -214,6 +359,7 @@
                     </div>
 
                 </div>
+                <div class="right-content-cover"></div>
             </div>
     </main>
 

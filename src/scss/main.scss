@@ -258,6 +258,7 @@ $border-color-4: #64C689;
 }
 
 // CUSTOM RADIO
+
 /* The container */
 .radio-container {
     display: block;
@@ -2571,6 +2572,169 @@ a {
     }
 }
 
+.new-account-popup {
+    @extend %popup;
+    width: 570px;
+    display: none;
+    top: 50px;
+    left: 0;
+
+    &.active {
+        display: block;
+    }
+
+    .radios {
+        // do zrobienia jako standard z extended
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        color: $font-color-2;
+
+        label {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .radio-container {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            margin-right: 10px;
+            font-weight: 400;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .radio-checkmark {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .popup-buttons {
+
+        .cancel-btn {
+            color: #64c689;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+
+        .add-btn {
+            width: 300px;
+        }
+    }
+}
+
+.new-sync-account-popup {
+    @extend %popup;
+    width: 690px;
+    display: none;
+    top: 50px;
+    left: 0;
+
+    &.active {
+        display: block;
+    }
+
+    .radios {
+        // do zrobienia jako standard z extended
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: $font-color-2;
+
+        label {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .radios-wrapper {
+            width: 440px;
+
+            .radio-container {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                margin-right: 10px;
+                font-weight: 400;
+                margin-right: -30px;
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+
+                .radio-checkmark {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    .custom-input-1,
+    .custom-input-and-select-2 {
+        input {
+            width: 440px;
+        }
+    }
+
+    .popup-buttons {
+
+        .cancel-btn {
+            color: #64c689;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            width: 300px;
+        }
+    }
+}
+
+.new-non-sync-account-popup {
+    @extend %popup;
+    width: 650px;
+    display: none;
+    top: 50px;
+    left: 0;
+
+    &.active {
+        display: block;
+    }
+
+    .custom-list-2 {
+        justify-content: space-around;
+
+        select {
+            width: 300px;
+        }
+    }
+
+    .popup-buttons {
+
+        .cancel-btn {
+            color: #64c689;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+
+        .add-btn {
+            width: 300px;
+        }
+    }
+}
+
+
 .yes-no-buttons {
     display: flex;
     margin-top: 45px;
@@ -2590,12 +2754,10 @@ a {
     }
 }
 
-.popup-with-arrow {
+%popup-with-arrow {
     @extend %popup;
     width: 480px;
     background-color: $background-color-1;
-    top: -8px;
-    left: 150px;
     display: block;
 
     &.inactive {
@@ -2665,4 +2827,20 @@ a {
 
         background-color: $background-color-1;
     }
+}
+
+.popup-with-arrow-budget-1 {
+    @extend %popup-with-arrow;
+    top: -8px;
+    left: 150px;
+}
+
+.popup-with-arrow-accounts-1 {
+    @extend %popup-with-arrow;
+    top: -38px;
+    left: 260px;
+}
+
+.accounts-page .buttons {
+    position: relative;
 }

@@ -35,8 +35,8 @@ const currencyFlagLoc_2 = document.querySelector(".form-elem_2 .flag-box .flag")
 
 if (currencyLoc_1) {
     currencyLoc_1.addEventListener("change", () => {
-        country = currencyLoc_1.value
-        currencyFlagLoc_1.src = `./img/${country}.svg`
+        country = currencyLoc_1.value;
+        currencyFlagLoc_1.src = `./img/${country}.svg`;
         currencyFlagLoc_1.alt = country;
     })
 }
@@ -44,7 +44,7 @@ if (currencyLoc_1) {
 if (currencyLoc_2) {
     currencyLoc_2.addEventListener("change", () => {
         country = currencyLoc_2.value.substr(0,2);
-        currencyFlagLoc_2.src = `./img/${country}.svg`
+        currencyFlagLoc_2.src = `./img/${country}.svg`;
         currencyFlagLoc_2.alt = country;
     })
 }
@@ -81,27 +81,27 @@ if (budgetPageLoc) {
     })
 
     //  budget approving tooltip activate
-    const apprBtnLoc = document.querySelectorAll(".table-revenue .button")
+    const apprBtnLoc = document.querySelectorAll(".table-revenue .button");
 
     apprBtnLoc.forEach((elem)=>{
         elem.addEventListener("mouseover", (e)=>{
-            const apprBtnTooltipLoc = e.target.closest(".button").querySelector(".tooltip")
+            const apprBtnTooltipLoc = e.target.closest(".button").querySelector(".tooltip");
             apprBtnTooltipLoc.classList.add("active");
         });
         elem.addEventListener("mouseout", (e)=>{
-            const apprBtnTooltipLoc = e.target.closest(".button").querySelector(".tooltip")
+            const apprBtnTooltipLoc = e.target.closest(".button").querySelector(".tooltip");
             apprBtnTooltipLoc.classList.remove("active");
         });
     })
 
-    //  budget add new budget
+    // add new budget
     const rightContentCoverLoc = document.querySelector(".right-content-cover");
     
     const addNewBudgetLoc = document.querySelector(".add-new-budget");
     
-    const newBudgetPopupLoc = document.querySelector(".new-budget-popup")
-    const closeBudgetBtnLoc = document.querySelector(".new-budget-popup .close-btn")
-    const cancelBudgetBtnLoc = document.querySelector(".new-budget-popup .cancel-btn")
+    const newBudgetPopupLoc = document.querySelector(".new-budget-popup");
+    const closeBudgetBtnLoc = document.querySelector(".new-budget-popup .close-btn");
+    const cancelBudgetBtnLoc = document.querySelector(".new-budget-popup .cancel-btn");
 
     addNewBudgetLoc.addEventListener("click", ()=>{
         rightContentCoverLoc.classList.add("active");
@@ -123,9 +123,9 @@ if (budgetPageLoc) {
 
     const addNewRevenueLoc = document.querySelector(".add-new-revenue");
     
-    const newRevenuePopupLoc = document.querySelector(".new-revenue-popup")
-    const closeRevenueBtnLoc = document.querySelector(".new-revenue-popup .close-btn")
-    const cancelRevenueBtnLoc = document.querySelector(".new-revenue-popup .cancel-btn")
+    const newRevenuePopupLoc = document.querySelector(".new-revenue-popup");
+    const closeRevenueBtnLoc = document.querySelector(".new-revenue-popup .close-btn");
+    const cancelRevenueBtnLoc = document.querySelector(".new-revenue-popup .cancel-btn");
 
     addNewRevenueLoc.addEventListener("click", ()=>{
         rightContentCoverLoc.classList.add("active");
@@ -144,17 +144,17 @@ if (budgetPageLoc) {
 
     //  budget edit category
 
-    const editCategoryBtnLoc = document.querySelector(".edit-cat-btn")
-    const pencilesLoc1 = document.querySelectorAll(".table-expenses .cell:nth-child(1) img")
-    const pencilesLoc2 = document.querySelectorAll(".table-expenses .cell:nth-child(2) img")
-    const binsLoc = document.querySelectorAll(".table-expenses .row .bin")
-    const yesNoButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons")
+    const editCategoryBtnLoc = document.querySelector(".edit-cat-btn");
+    const pencilesLoc1 = document.querySelectorAll(".table-expenses .cell:nth-child(1) img");
+    const pencilesLoc2 = document.querySelectorAll(".table-expenses .cell:nth-child(2) img");
+    const binsLoc = document.querySelectorAll(".table-expenses .row .bin");
+    const yesNoButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons");
 
-    const noButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons .cancel-add")
-    const yesButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons .btn.add")
+    const noButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons .cancel-add");
+    const yesButtonsLoc = document.querySelector(".table-expenses .yes-no-buttons .btn.add");
     
-    const delCatPopupLoc = document.querySelector(".del-cat-popup")
-    const delCatPopupCloseLoc = document.querySelector(".del-cat-popup .close-btn")
+    const delCatPopupLoc = document.querySelector(".del-cat-popup");
+    const delCatPopupCloseLoc = document.querySelector(".del-cat-popup .close-btn");
 
     editCategoryBtnLoc.addEventListener("click", ()=>{
         pencilesLoc1.forEach((elem)=>{
@@ -215,22 +215,114 @@ if (budgetPageLoc) {
         delCatPopupLoc.classList.remove("active");
     })
 
-     //  budget toutorial
-    const tutorialPopupLoc = document.querySelector(".popup-with-arrow");
+    //  budget toutorial
+    const tutorialPopupLoc = document.querySelector(".popup-with-arrow-budget-1");
 
-    const tutorialOffLoc = document.querySelector(".popup-with-arrow .cancel-btn");
+    const tutorialOffLoc = document.querySelector(".popup-with-arrow-budget-1 .cancel-btn");
     tutorialOffLoc.addEventListener("click", ()=>{
-        tutorialPopupLoc.classList.add("inactive")
+        tutorialPopupLoc.classList.add("inactive");
     })
 
-    const tutorialNextLoc = document.querySelector(".popup-with-arrow .add-btn");
+    const tutorialNextLoc = document.querySelector(".popup-with-arrow-budget-1 .add-btn");
     tutorialNextLoc.addEventListener("click", ()=>{
-        tutorialPopupLoc.classList.add("inactive")
+        tutorialPopupLoc.classList.add("inactive");
     })
 
-    const tutorialCloseLoc = document.querySelector(".popup-with-arrow .close-btn");
+    const tutorialCloseLoc = document.querySelector(".popup-with-arrow-budget-1 .close-btn");
     tutorialCloseLoc.addEventListener("click", ()=>{
-        tutorialPopupLoc.classList.add("inactive")
+        tutorialPopupLoc.classList.add("inactive");
     })
 }
 
+// ACCOUNTS
+const accountsPageLoc = document.querySelector(".accounts-page");
+
+if (accountsPageLoc) {
+
+    // accounts toutorial
+
+    const tutorialPopupLoc = document.querySelector(".popup-with-arrow-accounts-1");
+
+    const tutorialOffLoc = document.querySelector(".popup-with-arrow-accounts-1 .cancel-btn");
+    tutorialOffLoc.addEventListener("click", ()=>{
+        tutorialPopupLoc.classList.add("inactive");
+    })
+
+    const tutorialNextLoc = document.querySelector(".popup-with-arrow-accounts-1 .add-btn");
+    tutorialNextLoc.addEventListener("click", ()=>{
+        tutorialPopupLoc.classList.add("inactive");
+    })
+
+    const tutorialCloseLoc = document.querySelector(".popup-with-arrow-accounts-1 .close-btn");
+    tutorialCloseLoc.addEventListener("click", ()=>{
+        tutorialPopupLoc.classList.add("inactive");
+    });
+
+    //  add new account
+    const rightContentCoverLoc = document.querySelector(".right-content-cover");
+    
+    const addNewAccountLoc = document.querySelector(".add-new-account");
+    
+    const newAccountPopupLoc = document.querySelector(".new-account-popup");
+    const closeAccountBtnLoc = document.querySelector(".new-account-popup .close-btn");
+    const cancelAccountBtnLoc = document.querySelector(".new-account-popup .cancel-btn");
+
+    addNewAccountLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.add("active");
+        newAccountPopupLoc.classList.add("active");
+    });
+    
+    closeAccountBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newAccountPopupLoc.classList.remove("active");
+    });
+    
+    cancelAccountBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newAccountPopupLoc.classList.remove("active");
+    });
+
+    //  add new sync account
+    
+    const nextAccountBtnLoc = document.querySelector(".new-account-popup .add-btn");
+    const newSyncAccountPopupLoc = document.querySelector(".new-sync-account-popup");
+    const newNonSyncAccountPopupLoc = document.querySelector(".new-non-sync-account-popup");
+    const syncAccountRadioLoc = document.querySelector(".new-account-popup #sync-acc");
+    
+    
+    nextAccountBtnLoc.addEventListener("click", ()=>{
+        if (syncAccountRadioLoc.checked === true) {
+            newSyncAccountPopupLoc.classList.add("active");
+        } else {
+            newNonSyncAccountPopupLoc.classList.add("active");
+        }
+         newAccountPopupLoc.classList.remove("active");
+    });
+ 
+    const closeSyncAccountBtnLoc = document.querySelector(".new-sync-account-popup .close-btn");
+    const cancelSyncAccountBtnLoc = document.querySelector(".new-sync-account-popup .cancel-btn");
+
+    closeSyncAccountBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newSyncAccountPopupLoc.classList.remove("active");
+    });
+    
+    cancelSyncAccountBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newSyncAccountPopupLoc.classList.remove("active");
+    });
+
+    const closeNonSyncAccountBtnLoc = document.querySelector(".new-non-sync-account-popup .close-btn");
+    const cancelNonSyncAccountBtnLoc = document.querySelector(".new-non-sync-account-popup .cancel-btn");
+
+    closeNonSyncAccountBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newNonSyncAccountPopupLoc.classList.remove("active");
+    });
+    
+    cancelNonSyncAccountBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newNonSyncAccountPopupLoc.classList.remove("active");
+    });
+
+}
