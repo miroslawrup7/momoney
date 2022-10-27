@@ -2203,18 +2203,17 @@ a {
                             position: absolute;
                             right: 50px;
                             bottom: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: $font-color-8;
+                            font-size: 20px;
+                            font-weight: 500;
+                            cursor: pointer;
 
-                            a {
-                                display: flex;
-                                align-items: center;
-                                color: $font-color-8;
-                                font-size: 20px;
-                                font-weight: 500;
-
-                                img {
-                                    margin-right: 10px;
-                                }
+                            img {
+                                margin-right: 10px;
                             }
+
                         }
 
                         .full-cover {
@@ -2752,6 +2751,20 @@ a {
     }
 }
 
+.custom-input-and-select-4 {
+    @extend %custom-input-and-select;
+    justify-content: space-between;
+    margin: 32px 0;
+
+    input {
+        width: 320px;
+    }
+
+    select {
+        width: 110px;
+    }
+}
+
 .new-budget-popup {
     @extend %popup;
     width: 570px;
@@ -3148,40 +3161,15 @@ a {
 
 .edit-target-step-popup {
     @extend %popup;
-    width: 570px;
-    display: block;
-    top: 50vh; // dodaj w js
-    left: 50%;
-    transform: translateX(-50%);
+    width: 650px;
+    display: none;
+    top: 50%;
+    left: calc(50% + 305px / 2);
+    transform: translate(-50%, -50%);
+    position: fixed;
 
     &.active {
         display: block;
-    }
-
-    .radios {
-        // do zrobienia jako standard z extended
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $font-color-2;
-
-        label {
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        .radio-container {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            margin-right: 10px;
-            font-weight: 400;
-
-            .radio-checkmark {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
     }
 
     .popup-buttons {
@@ -3192,7 +3180,6 @@ a {
             font-weight: 600;
             cursor: pointer;
         }
-
 
         .add-btn {
             width: 300px;

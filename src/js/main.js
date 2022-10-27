@@ -351,6 +351,9 @@ if (transactionsPageLoc) {
 // TARGETS
 
     const targetsPageLoc = document.querySelector(".targets-page");
+    
+    if (targetsPageLoc) {
+
     const radioMonthlyLoc = document.querySelector("#monthly");
     const radioDeadlineLoc = document.querySelector("#deadline");
     const calendarInputLoc = document.querySelector(".custom-input-date-2");
@@ -361,8 +364,6 @@ if (transactionsPageLoc) {
     const closeTargetBtnLoc = document.querySelector(".new-target-popup .close-btn");
     const cancelTargetBtnLoc = document.querySelector(".new-target-popup .cancel-btn");
     
-    if (targetsPageLoc) {
-
     radioMonthlyLoc.addEventListener("change", ()=>{
         if (radioMonthlyLoc) {
             calendarInputLoc.classList.remove("active");
@@ -415,5 +416,41 @@ if (transactionsPageLoc) {
         rightContentCoverLoc.classList.remove("active");
         newLimitPopup.classList.remove("active");
     });
+
+}
+
+// TARGETS MOMONEY
+
+const targetsMomoneyPageLoc = document.querySelector(".targets-momoney-page");
     
+if (targetsMomoneyPageLoc) {
+
+
+
+    const editTargetLoc = document.querySelectorAll(".timeline .edit-target-btn");
+    const editTargetPopupLoc = document.querySelector(".edit-target-step-popup");
+    const titleEditTargetPopupLoc = document.querySelector(".edit-target-step-popup .title");
+    const cancelTargetPopupLoc = document.querySelector(".edit-target-step-popup .cancel-btn");
+    const closeTargetPopupLoc = document.querySelector(".edit-target-step-popup .close-btn");
+
+    const rightContentCoverLoc = document.querySelector(".right-content-cover");
+    
+    editTargetLoc.forEach((elem)=>{
+        elem.addEventListener("click", (e)=>{
+            editTargetPopupLoc.classList.add("active");
+            rightContentCoverLoc.classList.add("active")
+            titleEditTargetPopupLoc.innerText = "Dostosuj " + e.currentTarget.parentNode.querySelector(".step-title").innerText;
+        })
+    })
+
+    cancelTargetPopupLoc.addEventListener("click", ()=>{
+        editTargetPopupLoc.classList.remove("active");
+        rightContentCoverLoc.classList.remove("active")
+    })
+
+    closeTargetPopupLoc.addEventListener("click", ()=>{
+        editTargetPopupLoc.classList.remove("active");
+        rightContentCoverLoc.classList.remove("active")
+    })
+       
 }
