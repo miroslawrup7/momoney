@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666362328700" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666863081393" />
 
     <title>MoMoney</title>
 </head>
@@ -78,7 +78,7 @@
                     <img src="./img/help.svg" alt="help">
                     <img src="./img/logout.svg" alt="logout">
                 </div>
-                <div class="main-content">
+                <div class="main-content transactions-page">
                     <div class="title">
                         <h2>Transakcje</h2>
                         <div class="buttons no-margin">
@@ -95,9 +95,14 @@
                     <div class="filter">
                         <div class="budgets">
                             <p>Budżet:</p>
-                            <div class="budget-list">
-                                <p>Budżet osobisty</p>
-                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            <div class="custom-list-1">
+                                <select>
+                                    <option value="1">Wybierz budżet </option>
+                                    <option value="2">Budżet osobisty</option>
+                                    <option value="3">Budżet 2</option>
+                                    <option value="4">Budżet 3</option>
+                                    <option value="5">Budżet 4</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -153,6 +158,58 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="add-new-transaction">
+                            <hr>
+                            <div class="row">
+                                <div class="custom-input-and-select-3">
+                                    <label>Kwota:</label>
+                                    <input type="text" placeholder="Wpisz kwotę">
+                                    <select>
+                                        <option value="pln">PLN</option>
+                                        <option value="eur">EUR</option>
+                                        <option value="gbp">GBP</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                    <div class="leftmoney-info">
+                                        Pozostało do przypisania 1400 zł
+                                    </div>
+                                </div>
+
+                                <div class="custom-list-5">
+                                    <label>Kategoria: </label>
+                                    <select>
+                                        <option value="">Wybierz kategoria</option>
+                                        <option value="1">Kategoria 1</option>
+                                        <option value="2">Kategoria 2</option>
+                                        <option value="3">Kategoria 3</option>
+                                        <option value="4">Kategoria 4</option>
+                                    </select>
+                                </div>
+                                <div class="custom-input-2">
+                                    <label>Komentarz: </label>
+                                    <input type="text" placeholder="Dodaj komentarz                 ">
+                                </div>
+                                <div class="button">
+                                    <img src="./img/bin.svg" alt="bin">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="custom-input-and-select-3">
+
+                                </div>
+                                <div class="custom-list-5">
+
+                                </div>
+                                <div class="custom-input-2">
+
+                                </div>
+                                <div class="button">
+                                    <img src="./img/plus2.svg" alt="plus">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="yes-no-buttons">
                             <a class="cancel-add" href="#">Anuluj dodawanie</a>
                             <a class="btn add" href="#">Dodaj transakcję</a>
@@ -233,7 +290,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=1666362328700"></script>
+    <script src="./js/all.min.js?cache_bust=1666863081393"></script>
 </body>
 
 </html>

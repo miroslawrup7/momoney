@@ -326,3 +326,94 @@ if (accountsPageLoc) {
     });
 
 }
+
+// TRANSACTIONS
+const transactionsPageLoc = document.querySelector(".transactions-page");
+
+
+if (transactionsPageLoc) {
+   
+    const addTransactionBtnLoc = document.querySelector(".transactions-page .btn.add");
+ 
+    const addTransactionSectionLoc = document.querySelector(".transactions-page .add-new-transaction");
+
+    addTransactionBtnLoc.addEventListener("click",()=>{
+        addTransactionSectionLoc.classList.add("active");
+    })
+
+    const cancelTransactionBtnLoc = document.querySelector(".transactions-page .cancel-add");
+
+    cancelTransactionBtnLoc.addEventListener("click",()=>{
+        addTransactionSectionLoc.classList.remove("active");
+    })
+}
+
+// TARGETS
+
+    const targetsPageLoc = document.querySelector(".targets-page");
+    const radioMonthlyLoc = document.querySelector("#monthly");
+    const radioDeadlineLoc = document.querySelector("#deadline");
+    const calendarInputLoc = document.querySelector(".custom-input-date-2");
+    const amountInputLoc = document.querySelector(".custom-input-and-select-2 input");
+    const rightContentCoverLoc = document.querySelector(".right-content-cover");
+    const addTargetBtnLoc = document.querySelector(".targets-page .button.add-target");
+    const newTargetPopup = document.querySelector(".new-target-popup");
+    const closeTargetBtnLoc = document.querySelector(".new-target-popup .close-btn");
+    const cancelTargetBtnLoc = document.querySelector(".new-target-popup .cancel-btn");
+    
+    if (targetsPageLoc) {
+
+    radioMonthlyLoc.addEventListener("change", ()=>{
+        if (radioMonthlyLoc) {
+            calendarInputLoc.classList.remove("active");
+            amountInputLoc.placeholder = "Podaj kwotę miesięczną"
+        }
+    })
+
+    radioDeadlineLoc.addEventListener("change", ()=>{
+        if (radioDeadlineLoc) {
+            calendarInputLoc.classList.add("active");
+            amountInputLoc.placeholder = "Podaj kwotę docelową"
+        }
+    })
+
+    addTargetBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.add("active");
+        newTargetPopup.classList.add("active");
+        radioMonthlyLoc.checked = true;
+        calendarInputLoc.classList.remove("active");
+        amountInputLoc.placeholder = "Podaj kwotę miesięczną"
+    })
+    
+    closeTargetBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newTargetPopup.classList.remove("active");
+    });
+    
+    cancelTargetBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newTargetPopup.classList.remove("active");
+    });
+
+    const addLimitBtnLoc = document.querySelector(".targets-page .button.add-limit");
+    const newLimitPopup = document.querySelector(".new-limit-popup");
+    const closeLimitBtnLoc = document.querySelector(".new-limit-popup .close-btn");
+    const cancelLimitBtnLoc = document.querySelector(".new-limit-popup .cancel-btn");
+
+
+    addLimitBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.add("active");
+        newLimitPopup.classList.add("active");
+    })
+    
+    closeLimitBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newLimitPopup.classList.remove("active");
+    });
+    
+    cancelLimitBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        newLimitPopup.classList.remove("active");
+    });
+    
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666362328700" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666863081393" />
 
     <title>MoMoney</title>
 </head>
@@ -78,23 +78,23 @@
                     <img src="./img/help.svg" alt="help">
                     <img src="./img/logout.svg" alt="logout">
                 </div>
-                <div class="main-content">
+                <div class="main-content targets-page">
                     <div class="title">
                         <h2>Cele</h2>
                     </div>
 
                     <div class="sub-menu">
                         <div class="sub-menu-item one active">
-                            Moje cele i limity
+                            <a href="targets.html">Moje cele i limity</a>
                         </div>
                         <div class="sub-menu-item two ">
-                            Cele finansowe według MoMoney
+                            <a href="targets_momoney.html">Cele finansowe według MoMoney</a>
                         </div>
                     </div>
 
                     <div class="box-subtitle">Moje cele</div>
                     <div class="buttons">
-                        <div class="button">
+                        <div class="button add-target">
                             <img src="./img/plus.svg" alt="plus">
                             <p>Dodaj nowy cel</p>
                         </div>
@@ -102,6 +102,58 @@
                             <img src="./img/pencil.svg" alt="pencil">
                             <p>Edytuj cele</p>
                         </div>
+
+                        <!-- popup add new target -->
+                        <div class="new-target-popup">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie celu</div>
+                                <div class="radios">
+                                    <label>Typ celu:</label>
+                                    <div class="radios-wrapper">
+                                        <label class="radio-container">Określona kwota co miesiąc
+                                            <input type="radio" checked="checked" name="radio" id="monthly">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Określone saldo na koniec terminu
+                                            <input type="radio" name="radio" id="deadline">
+                                            <span class="radio-checkmark"></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="custom-input-1">
+                                    <label>Nazwa: </label>
+                                    <input type="text" placeholder="Wpisz nazwę celu">
+                                </div>
+
+                                <div class="custom-input-and-select-2">
+                                    <label>Kwota:</label>
+                                    <input type="text" placeholder="Podaj kwotę miesięczną">
+                                    <select>
+                                        <option value="pln">PLN</option>
+                                        <option value="eur">EUR</option>
+                                        <option value="gbp">GBP</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                </div>
+                                <div class="custom-input-date-2 ">
+                                    <label>Data: </label>
+                                    <input type="text" placeholder="Wybierz termin końcowy"
+                                        onfocus="(this.type='date')">
+                                </div>
+
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Anuluj akcję</a>
+                                    <a class="add-btn btn">Dodaj cel </a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="targets-diagrams">
@@ -195,13 +247,56 @@
 
                     <div class="box-subtitle">Moje limity</div>
                     <div class="buttons">
-                        <div class="button">
+                        <div class="button add-limit">
                             <img src="./img/plus.svg" alt="plus">
                             <p>Dodaj nowy limit</p>
                         </div>
                         <div class="button">
                             <img src="./img/pencil.svg" alt="pencil">
                             <p>Edytuj limity</p>
+                        </div>
+
+                        <!-- popup add new limit -->
+                        <div class="new-limit-popup">
+                            <div class="popup-container">
+                                <div class="title">Dodawanie celu</div>
+
+                                <div class="custom-list-2">
+                                    <label>Kategoria: </label>
+                                    <select>
+                                        <option value="">Wybierz kategorię</option>
+                                        <option value="1">Kategoria 1</option>
+                                        <option value="2">Kategoria 2</option>
+                                        <option value="3">Kategoria 3</option>
+                                        <option value="4">Kategoria 4</option>
+                                    </select>
+                                </div>
+
+                                <div class="custom-input-and-select-2">
+                                    <label>Kwota:</label>
+                                    <input type="text" placeholder="Podaj kwotę limitu">
+                                    <select>
+                                        <option value="pln">PLN</option>
+                                        <option value="eur">EUR</option>
+                                        <option value="gbp">GBP</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                </div>
+                                <div class="custom-input-date-2 ">
+                                    <label>Data: </label>
+                                    <input type="text" placeholder="Wybierz termin końcowy"
+                                        onfocus="(this.type='date')">
+                                </div>
+
+                                <div class="popup-buttons">
+                                    <a class="cancel-btn">Anuluj akcję</a>
+                                    <a class="add-btn btn">Dodaj cel </a>
+                                </div>
+
+                                <div class="close-btn">
+                                    <img src="./img/close.svg" alt="close">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -249,6 +344,7 @@
 
 
                 </div>
+                <div class="right-content-cover"></div>
             </div>
         </div>
     </main>
@@ -256,7 +352,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=1666362328700"></script>
+    <script src="./js/all.min.js?cache_bust=1666863081393"></script>
 </body>
 
 </html>

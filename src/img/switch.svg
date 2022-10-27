@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="31" viewBox="0 0 63 31">
+  <defs>
+    <filter id="Rectangle_152" x="0" y="0" width="63" height="31" filterUnits="userSpaceOnUse">
+      <feOffset dy="0.5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_10033" x="35" y="4.5" width="23" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_6079" data-name="Group 6079" transform="translate(-650.355 -695)">
+    <g transform="matrix(1, 0, 0, 1, 650.36, 695)" filter="url(#Rectangle_152)">
+      <rect id="Rectangle_152-2" data-name="Rectangle 152" width="60" height="28" rx="14" transform="translate(1.5 1)" fill="#cdd3f3"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 650.36, 695)" filter="url(#Ellipse_10033)">
+      <circle id="Ellipse_10033-2" data-name="Ellipse 10033" cx="10" cy="10" r="10" transform="translate(36.5 5)" fill="#f5f5f5"/>
+    </g>
+  </g>
+</svg>
