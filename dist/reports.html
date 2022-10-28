@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666895057972" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1666975301291" />
 
     <title>MoMoney</title>
 </head>
@@ -84,12 +84,16 @@
                     </div>
 
                     <div class="sub-menu">
-                        <div class="sub-menu-item one active">
-                            Raport miesięczny
-                        </div>
-                        <div class="sub-menu-item two">
-                            Raport roczny
-                        </div>
+                        <a href="reports.html">
+                            <div class="sub-menu-item one active">
+                                Raport miesięczny
+                            </div>
+                        </a>
+                        <a href="reports_yearly.html">
+                            <div class="sub-menu-item two ">
+                                Raport roczny
+                            </div>
+                        </a>
                         <div class="sub-menu-item three">
                             Zdrowie finansowe
                         </div>
@@ -107,9 +111,14 @@
                     <div class="filter reports">
                         <div class="budgets">
                             <p>Kategoria:</p>
-                            <div class="budget-list">
-                                <p>Żywność</p>
-                                <img src="./img/arrow-down.svg" alt="arrow-down">
+                            <div class="custom-list-1">
+                                <select>
+                                    <option value="1">Wybierz kategorię </option>
+                                    <option value="2">Żywność</option>
+                                    <option value="3">Kategoria 2</option>
+                                    <option value="4">Kategoria 3</option>
+                                    <option value="5">Budżet 4</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -159,7 +168,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=1666895057972"></script>
+    <script src="./js/all.min.js?cache_bust=1666975301291"></script>
 </body>
 
 </html>

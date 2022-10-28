@@ -2474,6 +2474,119 @@ a {
             }
         }
 
+        &.reports-yearly {
+            .buttons-wrapper {
+                display: flex;
+                margin-top: 50px;
+                align-items: center;
+
+                .custom-list-1 select {
+                    border-radius: 10px;
+                    width: 180px;
+                    text-align: center;
+                }
+
+                .report-btn {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: 48px;
+                }
+            }
+
+            .report-table-wrapper {
+                width: 1364px;
+                margin: 52px auto 100px auto;
+                background-color: $background-color-9;
+                border-radius: 15px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+
+                padding: 40px 30px 64px;
+
+                .report-table {
+
+                    .table-heads {
+                        display: flex;
+                        width: 1300px;
+
+                        .table-head {
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: $font-color-2;
+                            width: 70px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:first-child {
+                                width: 270px;
+
+                            }
+
+                            &:last-child {
+                                width: 190px;
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+
+                    .rows {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                        .row {
+                            height: 56px;
+                            width: 1300px;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            margin-top: 20px;
+                            position: relative;
+                            background-color: $background-color-1;
+                            border-radius: 15px;
+
+                            &.sub {
+                                width: 1250px;
+                                background-color: $background-color-10;
+
+                                .cell {
+                                    &:first-child {
+                                        width: 220px;
+                                    }
+                                }
+                            }
+
+                            .cell {
+                                font-size: 15px;
+                                color: $font-color-2;
+                                // border: 1px solid red;
+                                width: 70px;
+
+                                img {
+                                    margin-left: 10px;
+
+                                    &.rotate {
+                                        transform: rotate(-90deg);
+                                    }
+                                }
+
+                                &:first-child {
+                                    width: 270px;
+                                    font-size: 17px;
+                                    padding-left: 16px;
+                                }
+
+                                &:last-child {
+                                    width: 190px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .currency {
             width: 1364px;
             margin: 60px auto 100px auto;
@@ -2676,6 +2789,17 @@ a {
 
     select {
         width: 300px;
+    }
+}
+
+.custom-list-6 {
+    @extend %custom-list;
+
+    select {
+        height: 52px;
+        background-color: white;
+        border-radius: 10px;
+        border: $border-color-2 1px solid;
     }
 }
 
