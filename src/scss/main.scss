@@ -2587,6 +2587,59 @@ a {
             }
         }
 
+        &.reports-health {
+
+            .health-wrapper {
+                width: 680px;
+                margin: 52px auto 100px auto;
+                background-color: $background-color-9;
+                border-radius: 15px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+                margin-top: 200px;
+                position: relative;
+
+                .result {
+                    font-size: 70px;
+                    font-weight: 600;
+                    color: $font-color-7;
+                    padding-top: 45px;
+                    display: flex;
+                    justify-content: center;
+                    font-family: 'Poppins', sans-serif;
+                }
+
+                .info {
+                    font-size: 18px;
+                    color: $font-color-2;
+                    text-align: center;
+                    padding: 0 50px;
+                    margin-top: 14px;
+                    padding-bottom: 60px;
+                }
+
+                .sign {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 175px;
+                    width: 175px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    left: -40px;
+                    top: -40px;
+                    background: white;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+
+                    img {
+                        height: 80px;
+                    }
+                }
+            }
+        }
+
+
         .currency {
             width: 1364px;
             margin: 60px auto 100px auto;
