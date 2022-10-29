@@ -26,6 +26,7 @@ $background-color-9: #FFFFFF;
 $background-color-10: #F8F8F8;
 $background-color-11: #E4E4E4;
 $background-color-12: #64C689;
+$background-color-13: #E6E6E6;
 $font-color-1: #455085;
 $font-color-2: #43475D;
 $font-color-3: #5FD58C;
@@ -2639,6 +2640,108 @@ a {
             }
         }
 
+        &.reports-fortune {
+
+            .diagram-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fortune-tables {
+                display: flex;
+                justify-content: space-between;
+
+                .table-wrapper {
+                    width: 48%;
+                    min-height: 200px;
+
+                    .fortune-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 40px;
+                        height: 60px;
+
+                        .title-fortune {
+                            font-size: 23px;
+                            font-weight: 500;
+                            color: $font-color-7;
+                            font-family: 'Poppins', sans-serif;
+                        }
+
+                        .button {
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+
+                            p {
+                                color: #64c689;
+                                font-size: 20px;
+                                font-weight: 500;
+                                padding-left: 14px;
+                            }
+                        }
+                    }
+
+                    .fortune-table {
+
+                        background-color: #fff;
+                        border-radius: 15px;
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+                        padding: 30px 55px;
+
+                        .row {
+                            height: 56px;
+                            border-radius: 15px;
+                            margin: 20px 0;
+                            background-color: $background-color-10;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 26px;
+
+                            &.head {
+                                background-color: $background-color-1;
+
+                                .item,
+                                .value {
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            &.total {
+                                background-color: $background-color-13;
+
+                                .item {
+                                    font-size: 17px;
+                                    font-weight: 700;
+                                }
+
+                                .value {
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            .item {
+                                font-size: 17px;
+                                font-weight: 500;
+                            }
+
+                            .value {
+                                width: 120px;
+                                font-size: 15px;
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+        }
 
         .currency {
             width: 1364px;

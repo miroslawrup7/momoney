@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=123" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1667043345622" />
 
     <title>MoMoney</title>
 </head>
@@ -78,46 +78,90 @@
                     <img src="./img/help.svg" alt="help">
                     <img src="./img/logout.svg" alt="logout">
                 </div>
-                <div class="main-content reports-health">
+                <div class="main-content">
                     <div class="title">
                         <h2>Raporty</h2>
                     </div>
 
                     <div class="sub-menu">
                         <a href="reports.html">
-                            <div class="sub-menu-item one">
+                            <div class="sub-menu-item one active">
                                 Raport miesięczny
                             </div>
                         </a>
                         <a href="reports_yearly.html">
-                            <div class="sub-menu-item two">
+                            <div class="sub-menu-item two ">
                                 Raport roczny
                             </div>
                         </a>
                         <a href="reports_health.html">
-                            <div class="sub-menu-item three active">
+                            <div class="sub-menu-item three">
                                 Zdrowie finansowe
                             </div>
                         </a>
-                        <a href="reports_fortune.html">
-                            <div class="sub-menu-item four">
-                                Majątek netto
+                        <div class="sub-menu-item four">
+                            Majątek netto
+                        </div>
+                    </div>
+
+                    <div class="report-btn">
+                        <div>Plan</div>
+                        <div>Realizacja</div>
+                    </div>
+
+                    <div class="box-subtitle">Wydatki</div>
+                    <div class="filter reports">
+                        <div class="budgets">
+                            <p>Kategoria:</p>
+                            <div class="custom-list-1">
+                                <select>
+                                    <option value="1">Wybierz kategorię </option>
+                                    <option value="2">Żywność</option>
+                                    <option value="3">Kategoria 2</option>
+                                    <option value="4">Kategoria 3</option>
+                                    <option value="5">Budżet 4</option>
+                                </select>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="health-wrapper">
-                        <div class="result">
-                            49,84 %
-                        </div>
-                        <div class="info">
-                            Taka część Twojego dochodu trafiła do kategorii oszczędności. Dobra robota, oby tak dalej!
-                        </div>
-
-                        <div class="sign">
-                            <img src="./img/ok2.svg" alt="ok">
                         </div>
                     </div>
+
+                    <div class="targets-diagrams">
+                        <div class="diagram-box">
+                            <div class="diagram h-center">
+                                <div class="circle h-center">
+                                    <img src="./img/graph_4.svg" alt="ring-chart-75">
+                                </div>
+                                <div class="diagram-name">
+                                    Żywność
+                                </div>
+                            </div>
+
+                            <div class="legend two-col">
+                                <div class="legend-row">
+                                    <img src="./img/square-violet.svg" alt="square-grey">
+                                    <div class="legend-text">Jedzenie w domu</div>
+                                </div>
+                                <div class="legend-row">
+                                    <img src="./img/square-darkgrey.svg" alt="square-violet">
+                                    <div class="legend-text">Jedzenie w pracy</div>
+                                </div>
+                                <div class="legend-row">
+                                    <img src="./img/square-grey.svg" alt="square-violet">
+                                    <div class="legend-text">Jedzenie na mieście</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-subtitle">Cashflow</div>
+                    <div class="diagram-container">
+                        <img src="./img/graph-big-1.png" alt="graph">
+                    </div>
+                    <div class="box-subtitle">Bilans</div>
+                    <div class="diagram-container">
+                        <img src="./img/graph-big-2.png" alt="graph">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -126,7 +170,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=123"></script>
+    <script src="./js/all.min.js?cache_bust=1667043345622"></script>
 </body>
 
 </html>
