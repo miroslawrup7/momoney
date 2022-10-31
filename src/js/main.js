@@ -454,3 +454,39 @@ if (targetsMomoneyPageLoc) {
     })
        
 }
+
+// NOTIFICATIONS
+
+const notificationsBtnLoc = document.querySelector(".notifications-btn");
+const notificationsLoc = document.querySelector(".notifications");
+const notificationsCloseBtnLoc = document.querySelector(".notifications .close-btn");
+const notificationsAllViewLoc = document.querySelector(".notifications .all-notifications-btn");
+
+
+
+if (notificationsBtnLoc) {
+
+    notificationsBtnLoc.addEventListener("click", ()=>{
+        notificationsLoc.classList.add("active")
+    })
+
+    notificationsCloseBtnLoc.addEventListener("click", ()=>{
+        notificationsLoc.classList.remove("active")
+    })
+
+    notificationsAllViewLoc.addEventListener("click", ()=>{
+        notificationsLoc.classList.remove("active")
+        location.href = "notifications.html";
+    })
+
+}
+
+// LEFT MENU
+
+const hideMenuBtnLoc = document.querySelector(".left-menu .arrow img");
+const lefMenuLoc = document.querySelector(".left-menu");
+
+
+hideMenuBtnLoc.addEventListener("click", ()=>{
+    lefMenuLoc.classList.toggle("narrow")
+})
