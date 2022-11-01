@@ -189,11 +189,11 @@
                                 <div class="title">Dodawanie konta</div>
                                 <div class="radios">
                                     <label class="radio-container">Konto synchronizowane
-                                        <input type="radio" checked="checked" name="radio" id="sync-acc">
+                                        <input type="radio" checked="checked" name="acc_type_main" id="sync-acc">
                                         <span class="radio-checkmark"></span>
                                     </label>
                                     <label class="radio-container">Konto niesynchronizowane
-                                        <input type="radio" name="radio" id="non-sync-acc">
+                                        <input type="radio" name="acc_type_main" id="non-sync-acc">
                                         <span class="radio-checkmark"></span>
                                     </label>
                                 </div>
@@ -217,19 +217,19 @@
                                     <label>Typ konta:</label>
                                     <div class="radios-wrapper">
                                         <label class="radio-container">Rachunek rozliczeniowo-oszczędnościowy
-                                            <input type="radio" checked="checked" name="radio">
+                                            <input type="radio" checked="checked" name="acc_type">
                                             <span class="radio-checkmark"></span>
                                         </label>
                                         <label class="radio-container">Konto oszczędnościowe
-                                            <input type="radio" name="radio">
+                                            <input type="radio" name="acc_type">
                                             <span class="radio-checkmark"></span>
                                         </label>
                                         <label class="radio-container">Gotówka
-                                            <input type="radio" name="radio">
+                                            <input type="radio" name="acc_type">
                                             <span class="radio-checkmark"></span>
                                         </label>
                                         <label class="radio-container">Prepaid
-                                            <input type="radio" name="radio">
+                                            <input type="radio" name="acc_type">
                                             <span class="radio-checkmark"></span>
                                         </label>
                                     </div>
@@ -244,6 +244,7 @@
                                         <option value="gbp">GBP</option>
                                         <option value="usd">USD</option>
                                     </select>
+                                    <div class="new-account-error"></div>
                                 </div>
                                 <div class="custom-input-1">
                                     <label>Nazwa konta: </label>
@@ -253,6 +254,7 @@
                                 <div class="popup-buttons">
                                     <a class="cancel-btn">Anuluj akcję</a>
                                     <a class="add-btn btn">Dodaj konto </a>
+                                    <div class="new-account-all-error"></div>
                                 </div>
 
                                 <div class="close-btn">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1667199481123" />
+    <link rel="stylesheet" href="./css/main.min.css?cache_bust=1667333224323" />
 
     <title>MoMoney</title>
 </head>
@@ -180,11 +180,11 @@
                                     <label>Typ celu:</label>
                                     <div class="radios-wrapper">
                                         <label class="radio-container">Określona kwota co miesiąc
-                                            <input type="radio" checked="checked" name="radio" id="monthly">
+                                            <input type="radio" checked="checked" name="target-type" id="monthly">
                                             <span class="radio-checkmark"></span>
                                         </label>
                                         <label class="radio-container">Określone saldo na koniec terminu
-                                            <input type="radio" name="radio" id="deadline">
+                                            <input type="radio" name="target-type" id="deadline">
                                             <span class="radio-checkmark"></span>
                                         </label>
                                     </div>
@@ -205,6 +205,7 @@
                                         <option value="gbp">GBP</option>
                                         <option value="usd">USD</option>
                                     </select>
+                                    <div class="new-target-error"></div>
                                 </div>
                                 <div class="custom-input-date-2 ">
                                     <label>Data: </label>
@@ -215,6 +216,7 @@
                                 <div class="popup-buttons">
                                     <a class="cancel-btn">Anuluj akcję</a>
                                     <a class="add-btn btn">Dodaj cel </a>
+                                    <div class="new-target-all-error"></div>
                                 </div>
 
                                 <div class="close-btn">
@@ -328,7 +330,7 @@
                         <!-- popup add new limit -->
                         <div class="new-limit-popup">
                             <div class="popup-container">
-                                <div class="title">Dodawanie celu</div>
+                                <div class="title">Dodawanie limitu miesięcznego</div>
 
                                 <div class="custom-list-2">
                                     <label>Kategoria: </label>
@@ -350,16 +352,13 @@
                                         <option value="gbp">GBP</option>
                                         <option value="usd">USD</option>
                                     </select>
-                                </div>
-                                <div class="custom-input-date-2 ">
-                                    <label>Data: </label>
-                                    <input type="text" placeholder="Wybierz termin końcowy"
-                                        onfocus="(this.type='date')">
+                                    <div class="new-limit-error"></div>
                                 </div>
 
                                 <div class="popup-buttons">
                                     <a class="cancel-btn">Anuluj akcję</a>
                                     <a class="add-btn btn">Dodaj cel </a>
+                                    <div class="new-limit-all-error"></div>
                                 </div>
 
                                 <div class="close-btn">
@@ -421,7 +420,7 @@
     <footer>
     </footer>
 
-    <script src="./js/all.min.js?cache_bust=1667199481123"></script>
+    <script src="./js/all.min.js?cache_bust=1667333224323"></script>
 </body>
 
 </html>

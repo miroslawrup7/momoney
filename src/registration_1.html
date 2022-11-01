@@ -15,7 +15,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container registration-page">
             <div class="left-block">
                 <div class="logo">
                     <img src="./img/logo.svg" alt="logo">
@@ -46,17 +46,20 @@
                     <h1>Rejestracja</h1>
                     <form action="">
                         <div class="input">
-                            <input type="text" placeholder="Wpisz adres e-mail">
+                            <input id="email" type="text" placeholder="Wpisz adres e-mail">
+                            <div class="email-error"></div>
                         </div>
-                        <div class="input">
-                            <input type="password" placeholder="Podaj hasło">
+                        <div class="input pass">
+                            <input id="pass" type="password" placeholder="Podaj hasło">
                             <img src="./img/eye-open.svg" alt="eye open">
+                            <div class="pass-error"></div>
                         </div>
-                        <div class="input">
-                            <input type="password" placeholder="Powtórz hasło">
+                        <div class="input re-pass">
+                            <input id="re-pass" type="password" placeholder="Powtórz hasło">
                             <img src="./img/eye-open.svg" alt="eye open">
+                            <div class="re-pass-error"></div>
                         </div>
-                        <div class="input checkbox">
+                        <div class="input checkbox terms">
                             <label class="checkbox-container">Zapoznałem się z
                                 <a href="#">regulaminem</a> aplikacji MoMoney i akceptuję go.
 
@@ -64,7 +67,10 @@
                                 <span class="checkbox-checkmark"></span>
                             </label>
                         </div>
-                        <a href="registration_2.html" class="btn register">Zarejestruj się</a>
+                        <a href="#" class="btn register">
+                            Zarejestruj się
+                            <div class="register-error"></div>
+                        </a>
                         <p class="text-smaller">Masz już konto? <a href="logging_1.html">Zaloguj się!</a></p>
                     </form>
                 </div>

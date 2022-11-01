@@ -155,6 +155,9 @@ if (budgetPageLoc) {
     
     const delCatPopupLoc = document.querySelector(".del-cat-popup");
     const delCatPopupCloseLoc = document.querySelector(".del-cat-popup .close-btn");
+    const delCatPopupBtnLoc = document.querySelector(".del-cat-popup .add-btn");
+
+    const delCatConfirmPopupLoc = document.querySelector(".del-cat-confirm-popup");
 
     editCategoryBtnLoc.addEventListener("click", ()=>{
         pencilesLoc1.forEach((elem)=>{
@@ -215,6 +218,26 @@ if (budgetPageLoc) {
         delCatPopupLoc.classList.remove("active");
     })
 
+    delCatPopupBtnLoc.addEventListener("click", ()=>{
+        console.log(delCatPopupBtnLoc);
+        rightContentCoverLoc.classList.add("active");
+        delCatConfirmPopupLoc.classList.add("active");
+
+        console.log(window.innerHeight);
+        console.log(document.documentElement.clientHeight);
+        console.log(screen.height);
+        console.log(document.documentElement.scrollTop);
+
+        console.log(delCatConfirmPopupLoc.clientHeight);
+
+        delCatConfirmPopupLoc.style.top = (document.documentElement.clientHeight / 2 - delCatConfirmPopupLoc.clientHeight / 2 + document.documentElement.scrollTop)  + "px"
+
+        // delCatConfirmPopupLoc.style.top = document.documentElement.clientHeight - delCatConfirmPopupLoc.clientHeight
+
+
+
+    });
+
     //  budget toutorial
     const tutorialPopupLoc = document.querySelector(".popup-with-arrow-budget-1");
 
@@ -232,7 +255,53 @@ if (budgetPageLoc) {
     tutorialCloseLoc.addEventListener("click", ()=>{
         tutorialPopupLoc.classList.add("inactive");
     })
+
+    // VALIDATION NEW REVENUE
+
+    const newRevenueErrorLoc = document.querySelector(".new-revenue-error");
+    const newRevenueAmountLoc = document.querySelector(".new-revenue-amount input");
+    const newRevenueCurrencyLoc = document.querySelector(".new-revenue-amount select");
+
+    const addNewRevenueBtnLoc = document.querySelector(".new-revenue-popup .popup-buttons .add-btn");
+
+    const accountInputLoc = document.querySelector(".new-revenue-popup .custom-list-2 select");
+    const amountInputLoc = document.querySelector(".new-revenue-popup .custom-input-and-select-2 input");
+    const dateInputLoc = document.querySelector(".new-revenue-popup .custom-input-date-2 input");
+    const amountNameInputLoc = document.querySelector(".new-revenue-popup .custom-input-1 input");
+
+    const newRevenueAllErrorLoc = document.querySelector(".new-revenue-popup .new-revenue-all-error");
+
+    newRevenueAmountLoc.addEventListener("input", (e)=>{
+        if (isNaN(newRevenueAmountLoc.value)) {
+            newRevenueErrorLoc.innerText = "Kwota musi być liczbą!";
+            e.target.style.border = "1px #E90000 solid";
+            newRevenueCurrencyLoc.style.border = "1px #E90000 solid";
+            newRevenueCurrencyLoc.style.borderLeft = "none";
+        } else {
+            newRevenueErrorLoc.innerText = "";
+            e.target.style.border = "1px #acacac solid";
+            newRevenueCurrencyLoc.style.border = "1px #acacac solid";
+            newRevenueCurrencyLoc.style.borderLeft = "none";
+        }
+    })
+
+    addNewRevenueBtnLoc.addEventListener("click", ()=>{
+
+        newRevenueAllErrorLoc.innerText = ""
+
+        if (!accountInputLoc.value || !amountInputLoc.value || !dateInputLoc.value || !amountNameInputLoc.value) {
+            newRevenueAllErrorLoc.innerText = "Nie wszystkie pola zostały wypełnione!"
+        } else if (newRevenueErrorLoc.innerText) {
+            newRevenueAllErrorLoc.innerText = "Pola zawierają błędy!"
+        } else {
+            newRevenueAllErrorLoc.innerText = ""
+        }
+        
+    })
+
 }
+
+
 
 // ACCOUNTS
 const accountsPageLoc = document.querySelector(".accounts-page");
@@ -325,6 +394,46 @@ if (accountsPageLoc) {
         newNonSyncAccountPopupLoc.classList.remove("active");
     });
 
+    // VALIDATION NEW ACCOUNT
+
+    const newAccountErrorLoc = document.querySelector(".new-account-error");
+    const newAccountBalanceLoc = document.querySelector(".new-sync-account-popup .custom-input-and-select-2 input");
+    const newAccountCurrencyLoc = document.querySelector(".new-sync-account-popup .custom-input-and-select-2 select");
+
+    const addNewAccounteBtnLoc = document.querySelector(".new-sync-account-popup .popup-buttons .add-btn");
+
+    const accountNameInputLoc = document.querySelector(".new-sync-account-popup .custom-input-1 input");
+
+    const newAccountAllErrorLoc = document.querySelector(".new-sync-account-popup .new-account-all-error");
+
+    newAccountBalanceLoc.addEventListener("input", (e)=>{
+        if (isNaN(newAccountBalanceLoc.value)) {
+            newAccountErrorLoc.innerText = "Kwota musi być liczbą!";
+            e.target.style.border = "1px #E90000 solid";
+            newAccountCurrencyLoc.style.border = "1px #E90000 solid";
+            newAccountCurrencyLoc.style.borderLeft = "none";
+        } else {
+            newAccountErrorLoc.innerText = "";
+            e.target.style.border = "1px #acacac solid";
+            newAccountCurrencyLoc.style.border = "1px #acacac solid";
+            newAccountCurrencyLoc.style.borderLeft = "none";
+        }
+    })
+
+    addNewAccounteBtnLoc.addEventListener("click", ()=>{
+
+        newAccountAllErrorLoc.innerText = ""
+
+        if (!newAccountBalanceLoc.value || !accountNameInputLoc.value) {
+            newAccountAllErrorLoc.innerText = "Nie wszystkie pola zostały wypełnione!"
+        } else if (newAccountErrorLoc.innerText) {
+            newAccountAllErrorLoc.innerText = "Pola zawierają błędy!"
+        } else {
+            newAccountAllErrorLoc.innerText = ""
+        }
+        
+    })
+
 }
 
 // TRANSACTIONS
@@ -350,9 +459,9 @@ if (transactionsPageLoc) {
 
 // TARGETS
 
-    const targetsPageLoc = document.querySelector(".targets-page");
-    
-    if (targetsPageLoc) {
+const targetsPageLoc = document.querySelector(".targets-page");
+
+if (targetsPageLoc) {
 
     const radioMonthlyLoc = document.querySelector("#monthly");
     const radioDeadlineLoc = document.querySelector("#deadline");
@@ -416,6 +525,98 @@ if (transactionsPageLoc) {
         rightContentCoverLoc.classList.remove("active");
         newLimitPopup.classList.remove("active");
     });
+
+    // VALIDATION NEW TARGET
+
+    const newTargetErrorLoc = document.querySelector(".new-target-error");
+    const newTargetAmountLoc = document.querySelector(".new-target-popup .custom-input-and-select-2 input");
+    const newTargetCurrencyLoc = document.querySelector(".new-target-popup .custom-input-and-select-2 select");
+
+    const addNewTargetBtnLoc = document.querySelector(".new-target-popup .popup-buttons .add-btn");
+
+    const targetNameInputLoc = document.querySelector(".new-target-popup .custom-input-1 input");
+    const targetDateInputLoc = document.querySelector(".new-target-popup .custom-input-date-2 input");
+
+    const newTargetAllErrorLoc = document.querySelector(".new-target-popup .new-target-all-error");
+
+    const monthlyRadio = document.querySelector(".new-target-popup #monthly");
+
+    newTargetAmountLoc.addEventListener("input", (e)=>{
+        if (isNaN(newTargetAmountLoc.value)) {
+            newTargetErrorLoc.innerText = "Kwota musi być liczbą!";
+            e.target.style.border = "1px #E90000 solid";
+            newTargetCurrencyLoc.style.border = "1px #E90000 solid";
+            newTargetCurrencyLoc.style.borderLeft = "none";
+        } else {
+            newTargetErrorLoc.innerText = "";
+            e.target.style.border = "1px #acacac solid";
+            newTargetCurrencyLoc.style.border = "1px #acacac solid";
+            newTargetCurrencyLoc.style.borderLeft = "none";
+        }
+    })
+
+    addNewTargetBtnLoc.addEventListener("click", ()=>{
+
+        newTargetAllErrorLoc.innerText = ""
+
+        if (monthlyRadio.checked) {
+            if (!newTargetAmountLoc.value || !targetNameInputLoc.value) {
+                newTargetAllErrorLoc.innerText = "Nie wszystkie pola zostały wypełnione!"
+            } else if (newTargetErrorLoc.innerText) {
+                newTargetAllErrorLoc.innerText = "Pola zawierają błędy!"
+            } else {
+                newTargetAllErrorLoc.innerText = ""
+            }
+        } else {
+            if (!newTargetAmountLoc.value || !targetNameInputLoc.value || !targetDateInputLoc.value) {
+                newTargetAllErrorLoc.innerText = "Nie wszystkie pola zostały wypełnione!"
+            } else if (newTargetErrorLoc.innerText) {
+                newTargetAllErrorLoc.innerText = "Pola zawierają błędy!"
+            } else {
+                newTargetAllErrorLoc.innerText = ""
+            }
+        }
+    })
+
+    // VALIDATION NEW LIMIT
+
+    const newLimitErrorLoc = document.querySelector(".new-limit-error");
+    const newLimitBalanceLoc = document.querySelector(".new-limit-popup .custom-input-and-select-2 input");
+    const newLimitCurrencyLoc = document.querySelector(".new-limit-popup .custom-input-and-select-2 select");
+
+    const addNewLimitBtnLoc = document.querySelector(".new-limit-popup .popup-buttons .add-btn");
+
+    const limitNameInputLoc = document.querySelector(".new-limit-popup .custom-list-2 select");
+
+    const newLimitAllErrorLoc = document.querySelector(".new-limit-popup .new-limit-all-error");
+
+    newLimitBalanceLoc.addEventListener("input", (e)=>{
+        if (isNaN(newLimitBalanceLoc.value)) {
+            newLimitErrorLoc.innerText = "Kwota musi być liczbą!";
+            e.target.style.border = "1px #E90000 solid";
+            newLimitCurrencyLoc.style.border = "1px #E90000 solid";
+            newLimitCurrencyLoc.style.borderLeft = "none";
+        } else {
+            newLimitErrorLoc.innerText = "";
+            e.target.style.border = "1px #acacac solid";
+            newLimitCurrencyLoc.style.border = "1px #acacac solid";
+            newLimitCurrencyLoc.style.borderLeft = "none";
+        }
+    })
+
+    addNewLimitBtnLoc.addEventListener("click", ()=>{
+
+        newLimitAllErrorLoc.innerText = ""
+
+        if (!newLimitBalanceLoc.value || !limitNameInputLoc.value) {
+            newLimitAllErrorLoc.innerText = "Nie wszystkie pola zostały wypełnione!"
+        } else if (newLimitErrorLoc.innerText) {
+            newLimitAllErrorLoc.innerText = "Pola zawierają błędy!"
+        } else {
+            newLimitAllErrorLoc.innerText = ""
+        }
+        
+    })
 
 }
 
@@ -483,10 +684,152 @@ if (notificationsBtnLoc) {
 
 // LEFT MENU
 
-const hideMenuBtnLoc = document.querySelector(".left-menu .arrow img");
 const lefMenuLoc = document.querySelector(".left-menu");
+const hideMenuBtnLoc = document.querySelector(".left-menu .arrow img");
 
+if (lefMenuLoc) {
+    hideMenuBtnLoc.addEventListener("click", ()=>{
+        lefMenuLoc.classList.toggle("narrow")
+    })
+}
 
-hideMenuBtnLoc.addEventListener("click", ()=>{
-    lefMenuLoc.classList.toggle("narrow")
-})
+// REGISTRATION VALIDATION
+
+const validateEmail = (email) => {
+    return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
+
+const validatePass = (pass) => {
+    return pass.match(/^(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,}$/);
+}
+
+const registrationPageLoc = document.querySelector(".registration-page");
+
+if (registrationPageLoc) {
+
+    // registration email
+    
+    const emailInputLoc = document.querySelector(".registration-page #email");
+    const emailErrorLoc = document.querySelector(".registration-page .email-error");
+
+    let firstEnterToEmail = false;
+    let firstEnterToPass = false;
+    let firstEnterToRePass = false;
+
+    const correct = (e_target, errBox)=>{
+        errBox.innerText = ""
+        e_target.style.border = "1px #707070 solid"
+    }
+
+    const incorrect = (e_target, errBox, errMsg)=>{
+        errBox.innerText = errMsg;
+        e_target.style.border = "1px #E90000 solid";
+       
+    }
+    
+    emailInputLoc.addEventListener("blur", (e)=>{
+        if (validateEmail(emailInputLoc.value) || !emailInputLoc.value) {
+            correct(e.target, emailErrorLoc)
+        } else {
+            incorrect(e.target, emailErrorLoc, "Adres e-mail niepoprawny!")
+            firstEnterToEmail = true;
+        } 
+    })
+
+    emailInputLoc.addEventListener("input", (e)=>{
+        if (firstEnterToEmail) {
+            if (validateEmail(emailInputLoc.value) || !emailInputLoc.value) {
+                correct(e.target, emailErrorLoc)
+            } else {
+                incorrect(e.target, emailErrorLoc, "Adres e-mail niepoprawny!")
+            }
+        }
+    })
+
+    // registration password
+    
+    const passInputLoc = document.querySelector(".registration-page #pass");
+    const passErrorLoc = document.querySelector(".registration-page .pass-error");
+
+    passInputLoc.addEventListener("blur", (e)=>{
+        if (validatePass(passInputLoc.value) || !passInputLoc.value) {
+            correct(e.target, passErrorLoc)
+        } else {
+            incorrect(e.target, passErrorLoc, "Hasło niepoprawne!")
+            firstEnterToPass = true;
+        } 
+    })
+
+    passInputLoc.addEventListener("input", (e)=>{
+        if (firstEnterToPass) {
+            if (validatePass(passInputLoc.value) || !passInputLoc.value) {
+                correct(e.target, passErrorLoc)
+            } else {
+                incorrect(e.target, passErrorLoc, "Hasło niepoprawne!")
+            }
+        }
+    })
+
+    // registration re-password
+    
+    const repassInputLoc = document.querySelector(".registration-page #re-pass");
+    const repassErrorLoc = document.querySelector(".registration-page .re-pass-error");
+
+    repassInputLoc.addEventListener("blur", (e)=>{
+        if (repassInputLoc.value === passInputLoc.value || !repassInputLoc.value) {
+            correct(e.target, repassErrorLoc)
+        } else {
+            incorrect(e.target, repassErrorLoc, "Hasła nie są identyczne!")
+            firstEnterToRePass = true;
+        } 
+    })
+
+    repassInputLoc.addEventListener("input", (e)=>{
+        if (firstEnterToRePass) {
+            if (repassInputLoc.value === passInputLoc.value || !repassInputLoc.value) {
+                correct(e.target, repassErrorLoc)
+            } else {
+                incorrect(e.target, repassErrorLoc, "Hasła nie są identyczne!")
+            }
+        }
+    })
+
+    // show password
+
+    const passShowBtnLoc = document.querySelector(".registration-page .pass img");
+
+    passShowBtnLoc.addEventListener("click", ()=>{
+        if (passInputLoc.type === "password") {
+            passInputLoc.type = "text"
+        } else {
+            passInputLoc.type = "password"
+        }
+    })
+
+    const repassShowBtnLoc = document.querySelector(".registration-page .re-pass img");
+
+    repassShowBtnLoc.addEventListener("click", ()=>{
+        if (repassInputLoc.type === "password") {
+            repassInputLoc.type = "text"
+        } else {
+            repassInputLoc.type = "password"
+        }
+    })
+
+    // registration button
+
+    const registrationBtnLoc = document.querySelector(".registration-page .register");
+    const termsInputLoc = document.querySelector(".registration-page .terms input");
+    const registerErrorLoc = document.querySelector(".registration-page .register-error");
+
+    registrationBtnLoc.addEventListener("click", ()=>{
+        registerErrorLoc.innerText = "";
+        if (!emailInputLoc.value || !passInputLoc.value || !repassInputLoc.value || !termsInputLoc.checked) {
+            registerErrorLoc.innerText = "Nie wszystkie pola zostały wypełnione!";
+        } else if (emailErrorLoc.innerText || passErrorLoc.innerText || repassErrorLoc.innerText) {
+            registerErrorLoc.innerText = "Pola zawierają błędy!";
+        } else {
+            location.href = "registration_2.html";
+        }
+    })
+}

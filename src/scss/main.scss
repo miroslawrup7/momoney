@@ -40,11 +40,13 @@ $font-color-9: #535873;
 $font-color-10: #9A5353;
 $font-color-11: #68AE81;
 $font-color-12: #8E929D;
+$font-color-13: #E90000;
 $border-color-1: #707070;
 $border-color-2: #ACACAC;
 $border-color-3: #A9A9A9;
 $border-color-4: #64C689;
 $border-color-5: #cdd0dbb1;
+$border-color-6: #E90000;
 
 
 %custom-list {
@@ -435,6 +437,15 @@ a {
         &.register {
             width: 400px;
             margin-top: 20px;
+            position: relative;
+
+            div {
+                font-weight: 400;
+                text-align: center;
+                width: 100%;
+                left: 0;
+            }
+
         }
 
         &.logging {
@@ -1152,13 +1163,6 @@ a {
 
             &.active {
                 background-color: rgba($background-color-4, 7%);
-            }
-
-
-            img {
-                // padding: 0 10px;
-                // margin: 0 20px;
-                // cursor: pointer;
             }
         }
 
@@ -3234,32 +3238,16 @@ a {
                             margin-top: 20px;
                             font-weight: 600;
                             color: $font-color-12;
+                            cursor: pointer;
 
                             img {
                                 height: 24px;
                                 margin-right: 10px;
                             }
-
-
                         }
                     }
-
-
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 
@@ -3527,15 +3515,27 @@ a {
         margin-top: 10px;
     }
 
-    .custom-list-2 {
-        width: 300px;
+    .select-and-btn-wrapper {
+        display: flex;
+        justify-content: space-between;
 
-        select {
-            margin-left: 0;
+        .custom-list-2 {
+            width: 300px;
+
+            select {
+                margin-left: 0;
+            }
         }
 
+        .popup-buttons {
+            .add-btn {
+                width: 150px;
+            }
+        }
     }
 }
+
+
 
 .new-account-popup {
     @extend %popup;
@@ -3644,6 +3644,7 @@ a {
 
     .custom-input-1,
     .custom-input-and-select-2 {
+
         input {
             width: 440px;
         }
@@ -3853,6 +3854,34 @@ a {
     }
 }
 
+.del-cat-confirm-popup {
+    @extend %popup;
+    width: 1088px;
+    min-height: 200px;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 50px;
+
+    &.active {
+        display: block;
+    }
+
+    .popup-buttons {
+
+        .cancel-btn {
+            color: #64c689;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            width: 300px;
+        }
+    }
+}
+
 .yes-no-buttons {
     display: flex;
     margin-top: 45px;
@@ -3961,4 +3990,79 @@ a {
 
 .accounts-page .buttons {
     position: relative;
+}
+
+.email-error,
+.pass-error,
+.re-pass-error,
+.register-error {
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-revenue-error {
+    position: absolute;
+    bottom: -20px;
+    left: 100px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-revenue-all-error {
+    position: absolute;
+    bottom: -20px;
+    left: 230px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-account-error {
+    position: absolute;
+    bottom: -20px;
+    left: 180px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-account-all-error {
+    position: absolute;
+    bottom: -20px;
+    left: 320px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-target-error {
+    position: absolute;
+    bottom: -20px;
+    left: 145px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-target-all-error {
+    position: absolute;
+    bottom: -20px;
+    left: 295px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-limit-error {
+    position: absolute;
+    bottom: -20px;
+    left: 145px;
+    font-size: 14px;
+    color: $font-color-13;
+}
+
+.new-limit-all-error {
+    position: absolute;
+    bottom: -20px;
+    left: 295px;
+    font-size: 14px;
+    color: $font-color-13;
 }
