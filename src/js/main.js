@@ -219,22 +219,10 @@ if (budgetPageLoc) {
     })
 
     delCatPopupBtnLoc.addEventListener("click", ()=>{
-        console.log(delCatPopupBtnLoc);
         rightContentCoverLoc.classList.add("active");
         delCatConfirmPopupLoc.classList.add("active");
 
-        console.log(window.innerHeight);
-        console.log(document.documentElement.clientHeight);
-        console.log(screen.height);
-        console.log(document.documentElement.scrollTop);
-
-        console.log(delCatConfirmPopupLoc.clientHeight);
-
         delCatConfirmPopupLoc.style.top = (document.documentElement.clientHeight / 2 - delCatConfirmPopupLoc.clientHeight / 2 + document.documentElement.scrollTop)  + "px"
-
-        // delCatConfirmPopupLoc.style.top = document.documentElement.clientHeight - delCatConfirmPopupLoc.clientHeight
-
-
 
     });
 
