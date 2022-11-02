@@ -158,6 +158,9 @@ if (budgetPageLoc) {
     const delCatPopupBtnLoc = document.querySelector(".del-cat-popup .add-btn");
 
     const delCatConfirmPopupLoc = document.querySelector(".del-cat-confirm-popup");
+    const delCatConfirmPopupCloseBtnLoc = document.querySelector(".del-cat-confirm-popup .close-btn");
+    const delCatConfirmPopupCancelBtnLoc = document.querySelector(".del-cat-confirm-popup .cancel-btn");
+
 
     editCategoryBtnLoc.addEventListener("click", ()=>{
         pencilesLoc1.forEach((elem)=>{
@@ -224,7 +227,19 @@ if (budgetPageLoc) {
 
         delCatConfirmPopupLoc.style.top = (document.documentElement.clientHeight / 2 - delCatConfirmPopupLoc.clientHeight / 2 + document.documentElement.scrollTop)  + "px"
 
+        delCatPopupLoc.classList.remove("active");
+delCatConfirmPopupLoc
     });
+
+    delCatConfirmPopupCloseBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        delCatConfirmPopupLoc.classList.remove("active");
+    })
+
+    delCatConfirmPopupCancelBtnLoc.addEventListener("click", ()=>{
+        rightContentCoverLoc.classList.remove("active");
+        delCatConfirmPopupLoc.classList.remove("active");
+    })
 
     //  budget toutorial
     const tutorialPopupLoc = document.querySelector(".popup-with-arrow-budget-1");
@@ -288,8 +303,6 @@ if (budgetPageLoc) {
     })
 
 }
-
-
 
 // ACCOUNTS
 const accountsPageLoc = document.querySelector(".accounts-page");
