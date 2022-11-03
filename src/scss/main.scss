@@ -1134,7 +1134,7 @@ a {
 
 .right-content {
     margin-left: 0;
-    width: 1820px;
+    width: 1920px;
     position: relative;
     background-color: $background-color-5;
 
@@ -1143,7 +1143,7 @@ a {
         border-bottom: 1px solid rgba($border-color-1, 21%);
         position: fixed;
         top: 0;
-        width: 1820px;
+        width: 1920px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -1611,6 +1611,7 @@ a {
 
                         &:nth-child(1) {
                             width: 27%;
+                            padding-left: 15px;
                         }
 
                         &:nth-child(2) {
@@ -2266,7 +2267,7 @@ a {
 
                 &.active {
                     display: block;
-                    margin-bottom: -45px;
+                    margin-bottom: 80px;
                 }
 
                 hr {
@@ -2281,6 +2282,7 @@ a {
                     height: 56px;
                     width: 100%;
                     margin-top: 20px;
+                    position: relative;
 
                     .leftmoney-info {
                         position: absolute;
@@ -2297,6 +2299,13 @@ a {
                         img {
                             margin-left: 12px;
                         }
+                    }
+
+                    .plus {
+                        position: absolute;
+                        bottom: -64px;
+                        right: 10px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -4108,4 +4117,1364 @@ a {
     left: 295px;
     font-size: 14px;
     color: $font-color-13;
+}
+
+@media (max-width: 1960px) {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .box-title {
+        font-size: 23px;
+    }
+
+    .box-subtitle {
+        font-size: 20px;
+    }
+
+    .buttons {
+        .button {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container {
+        width: 1200px;
+    }
+
+    .left-menu {
+        width: 260px;
+
+        .logo {
+            img {
+                height: 22px;
+                width: auto;
+            }
+        }
+
+        &.narrow {
+            width: 70px;
+
+            .menu {
+                .menu-item {
+                    background-size: 32px !important;
+                }
+            }
+        }
+
+        .arrow {
+            img {
+                height: 25px;
+                width: auto;
+                margin-right: 10px;
+            }
+        }
+
+        .menu {
+            .menu-item {
+
+                margin: 16px 0;
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .right-content {
+        margin-left: 0;
+        width: 1200px;
+
+        .top-menu {
+            width: 1200px;
+            height: 70px;
+
+            .circle {
+                margin: -3px;
+
+                img {
+                    transform: scale(0.8);
+                }
+            }
+        }
+
+        .main-content {
+            width: 100%;
+            margin: 70px auto 0;
+            padding: 30px 30px 60px 100px;
+
+            .title {
+
+                .dots {
+                    left: 115px;
+                    transform: scale(0.9);
+                }
+
+            }
+
+            .box-subtitle {
+                margin-top: 30px;
+            }
+
+            .filter {
+                font-size: 18px;
+                height: 48px;
+
+                select {
+                    font-size: 18px;
+                    height: 48px;
+
+                    option {
+                        font-size: 18px;
+                    }
+                }
+
+                .dates {
+                    overflow: hidden; //tymczas
+
+                    p {
+                        flex-shrink: 0;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .budget-diagrams {
+                flex-wrap: wrap;
+
+                .diagram-box {
+                    width: 32%;
+                    height: auto;
+                    padding-bottom: 32px;
+
+                    .diagram-title {
+                        font-size: 20px;
+                    }
+
+                    .diagram {
+                        margin-top: 25px;
+
+                        .circle {
+                            margin-left: 0;
+                            transform: scale(0.7);
+                        }
+
+                        .diagram-details {
+                            margin-left: 0;
+                            min-height: 165px;
+
+                            .diagram-detail {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .legend {
+                        .legend-row {
+                            .legend-text {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .budget-summary {
+                width: 100%;
+                padding: 20px 20px 40px 20px;
+
+                .boxes {
+                    .box {
+                        font-size: 18px;
+                    }
+                }
+
+                .table-revenue {
+                    .table-heads {
+                        .table-head {
+                            font-size: 18px;
+
+                            &:first-child {
+                                width: 20%;
+                            }
+                        }
+                    }
+
+                    .rows {
+                        .row {
+                            height: 44px;
+
+                            .data {
+                                border-radius: 10px;
+
+                                .cell {
+                                    font-size: 16px;
+
+                                    &:first-child {
+                                        width: 20%;
+                                    }
+                                }
+                            }
+
+                            .button {
+                                img {
+                                    height: 44px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .more {
+                    font-size: 16px;
+                }
+
+                .table-expenses {
+                    .table-heads {
+                        width: 1000px;
+
+                        .table-head {
+                            font-size: 15px;
+
+                            &:nth-child(1) {
+                                width: 60px;
+                                margin-right: 20px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 390px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 150px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 150px;
+                            }
+
+                            &:nth-child(5) {
+                                width: 100px;
+                            }
+
+                            &:nth-child(6) {
+                                width: 50px;
+                            }
+                        }
+                    }
+
+                    .rows {
+                        width: 1000px;
+                        // border: red 1px solid;
+                        align-items: flex-end;
+
+                        .row {
+                            height: 44px;
+                            width: 940px;
+                            // border: red 1px solid;
+                            margin-right: 60px;
+
+
+                            .point {
+                                font-size: 16px;
+                                width: 50px;
+                                border-radius: 10px;
+                            }
+
+                            .data {
+                                border-radius: 10px;
+                                width: 870px;
+                                // border: blueviolet 1px solid;
+
+
+                                .cell {
+                                    font-size: 16px;
+                                    // border: red 1px solid;
+
+                                    &:nth-child(1) {
+                                        width: 400px;
+                                    }
+
+                                    &:nth-child(2) {
+                                        width: 150px;
+                                    }
+
+                                    &:nth-child(3) {
+                                        width: 150px;
+                                    }
+
+                                    &:nth-child(4) {
+                                        width: 100px;
+                                    }
+
+                                    &:nth-child(5) {
+                                        width: 50px;
+                                    }
+
+                                }
+
+                                &:after {
+                                    border-bottom-left-radius: 10px;
+                                    border-top-left-radius: 10px;
+                                }
+
+                                &.width_4:after {
+                                    border-bottom-right-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                }
+                            }
+
+                            .bin {
+
+                                height: 44px;
+
+                            }
+
+                            &.sub {
+                                width: 910px;
+                                // border: green 1px solid;
+
+                                .data {
+                                    width: 840px;
+                                    // border: blueviolet 1px solid;
+
+                                    .cell {
+
+                                        &:nth-child(1) {
+                                            width: 370px;
+                                        }
+
+                                        &:nth-child(2) {
+                                            width: 150px;
+                                        }
+
+                                        &:nth-child(3) {
+                                            width: 150px;
+                                        }
+
+                                        &:nth-child(4) {
+                                            width: 100px;
+                                        }
+
+                                        &:nth-child(5) {
+                                            width: 50px;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .yes-no-buttons {
+                        font-size: 16px;
+
+                        a {
+                            font-size: 16px;
+
+                            &.btn {
+                                height: 46px;
+                                width: 250px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .account-summary {
+                width: 1064px;
+            }
+
+            .account-history {
+                width: 1064px;
+
+                .transaction-row {
+
+                    img.edit-btn {
+
+                        height: 43px;
+                    }
+                }
+            }
+
+            .add-transaction {
+                width: 1064px;
+
+                .rows {
+                    .row {
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        div {
+                            margin: 10px 30px;
+                        }
+
+                        .custom-input-2 {
+                            flex-basis: 100%;
+                            justify-content: center;
+
+                            input {
+                                width: 710px;
+                            }
+                        }
+                    }
+                }
+
+                .add-new-transaction {
+                    // margin-bottom: 0;
+
+                    .row {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        height: auto;
+
+                        div {
+                            margin: 20px 30px;
+                        }
+
+                        .custom-input-2 {
+                            flex-basis: 72%;
+                            justify-content: center;
+
+                            input {
+                                width: 690px;
+                            }
+                        }
+
+                        .button {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .plus {
+                            right: 33px;
+                            bottom: -47px;
+                        }
+
+                        .leftmoney-info {
+                            bottom: -48px;
+                            right: -32px;
+                        }
+                    }
+                }
+            }
+
+            .targets-diagrams {
+                .diagram-box {
+                    width: 31%;
+                    height: 550px;
+
+                    .diagram-box-shadow {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &.limits {
+                    flex-wrap: wrap;
+
+                    .diagram-box {
+                        width: 60%;
+                        margin: 20px auto;
+
+                        .diagram {
+                            justify-content: center;
+
+                            .circle {
+                                img {
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.targets-momoney-page {
+                .timeline {
+                    .step-wrapper {
+                        border-right: none;
+                        min-height: 0;
+                        min-width: 0;
+                        margin: 30px 0;
+
+                        .step::after {
+                            border-top: none;
+                        }
+
+                        &:nth-child(2n) {
+                            border-left: none;
+
+                            .step {
+                                margin-top: 0;
+                                right: 0;
+                            }
+
+                            .step::after {
+                                border-top: none;
+                            }
+                        }
+
+                        &:first-child {
+                            min-height: 0;
+                        }
+                    }
+                }
+            }
+
+            .targets-diagrams {
+                &.report {
+                    .diagram-box {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .diagram-container {
+                width: 1064px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &.reports-yearly {
+                .report-table-wrapper {
+                    width: 1064px;
+
+                    .report-table {
+                        .table-heads {
+                            width: 1000px;
+
+                            .table-head {
+                                font-size: 17px;
+                                width: 50px;
+
+                                &:first-child {
+                                    width: 260px;
+                                }
+
+                                &:last-child {
+                                    width: 140px;
+                                }
+
+                                .custom-list-6 {
+                                    select {
+                                        font-size: 16px;
+                                        padding-left: 10px;
+                                        padding-right: 36px;
+                                        height: 44px;
+
+                                        option {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .rows {
+                            .row {
+                                width: 1000px;
+                                border-radius: 10px;
+
+                                &.sub {
+                                    width: 960px;
+                                }
+
+                                .cell {
+                                    font-size: 13px;
+                                    width: 50px;
+
+                                    &:first-child {
+                                        font-size: 14px;
+                                        width: 260px;
+                                    }
+
+                                    &:last-child {
+                                        width: 140px;
+                                    }
+                                }
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .currency {
+                width: 1064px;
+            }
+
+            &.notifications {
+                .notifications-wrapper {
+                    width: 1064px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p.info {
+        font-size: 18px;
+    }
+
+    .box-title {
+        font-size: 23px;
+    }
+
+    .box-subtitle {
+        font-size: 20px;
+    }
+
+    .buttons {
+        .button {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container {
+        width: 992px;
+    }
+
+    .left-menu {
+        width: 240px;
+
+        .logo {
+            img {
+                height: 22px;
+                width: auto;
+            }
+        }
+
+        &.narrow {
+            width: 70px;
+
+            .menu {
+                .menu-item {
+                    background-size: 28px !important;
+                }
+            }
+        }
+
+        .arrow {
+            img {
+                height: 25px;
+                width: auto;
+                margin-right: 10px;
+            }
+        }
+
+        .menu {
+            .menu-item {
+                background-size: 28px !important;
+
+                margin: 0;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .right-content {
+        margin-left: 0;
+        width: 922px;
+
+        .top-menu {
+            width: 922px;
+            height: 70px;
+
+            .circle {
+                margin: -6px;
+
+                img {
+                    transform: scale(0.8);
+                }
+            }
+        }
+
+        .main-content {
+            width: 100%;
+            margin: 70px auto 0;
+            padding: 30px 30px 60px 100px;
+
+            .sub-menu {
+                .sub-menu-item.two {
+                    margin-left: 216px;
+                }
+
+                .sub-menu-item.three {
+                    margin-left: 392px;
+                }
+
+                .sub-menu-item.four {
+                    margin-left: 616px;
+                }
+            }
+
+            .title {
+
+                .dots {
+                    left: 115px;
+                    transform: scale(0.9);
+                }
+
+            }
+
+            .box-subtitle {
+                margin-top: 30px;
+            }
+
+            .filter {
+                font-size: 18px;
+                height: 48px;
+
+                select {
+                    font-size: 18px;
+                    height: 48px;
+
+                    option {
+                        font-size: 18px;
+                    }
+                }
+
+                .dates {
+                    overflow: hidden; //tymczas
+
+                    p {
+                        flex-shrink: 0;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .budget-diagrams {
+                flex-wrap: wrap;
+
+                .diagram-box {
+                    width: 60%;
+                    margin: 20px auto;
+                    height: auto;
+                    padding-bottom: 32px;
+
+                    .diagram-title {
+                        font-size: 20px;
+                    }
+
+                    .diagram {
+                        margin-top: 25px;
+
+                        .circle {
+                            margin-left: 0;
+                            transform: scale(0.7);
+                        }
+
+                        .diagram-details {
+                            margin-left: 0;
+                            min-height: 165px;
+
+                            .diagram-detail {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .legend {
+                        .legend-row {
+                            .legend-text {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .budget-summary {
+                width: 100%;
+                padding: 20px 20px 40px 20px;
+
+                .boxes {
+                    .box {
+                        font-size: 18px;
+
+                        .value {
+                            left: 277px;
+                        }
+                    }
+                }
+
+                .table-revenue {
+                    .table-heads {
+                        width: 92%;
+
+                        .table-head {
+
+                            font-size: 16px;
+                            padding-right: 42px;
+
+                            &:last-child {
+                                padding-right: 0;
+                            }
+
+                            &:first-child {
+                                width: 20%;
+                            }
+                        }
+                    }
+
+                    .rows {
+                        .row {
+                            height: 44px;
+
+                            .data {
+                                border-radius: 10px;
+                                width: 92%;
+
+                                .cell {
+                                    font-size: 16px;
+
+                                    &:first-child {
+                                        width: 20%;
+                                    }
+                                }
+                            }
+
+                            .button {
+                                img {
+                                    height: 44px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .more {
+                    font-size: 16px;
+                }
+
+                .table-expenses {
+                    .table-heads {
+                        width: 752px;
+
+                        .table-head {
+                            font-size: 15px;
+
+                            &:nth-child(1) {
+                                width: 60px;
+                                margin-right: 20px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 285px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 110px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 110px;
+                            }
+
+                            &:nth-child(5) {
+                                width: 100px;
+                            }
+
+                            &:nth-child(6) {
+                                width: 50px;
+                            }
+                        }
+                    }
+
+                    .rows {
+                        width: 752px;
+                        // border: red 1px solid;
+                        align-items: flex-end;
+
+                        .row {
+                            height: 44px;
+                            width: 692px;
+                            // border: red 1px solid;
+                            margin-right: 60px;
+
+
+                            .point {
+                                font-size: 16px;
+                                width: 50px;
+                                border-radius: 10px;
+                            }
+
+                            .data {
+                                border-radius: 10px;
+                                width: 622px;
+                                // border: blueviolet 1px solid;
+
+
+                                .cell {
+                                    font-size: 16px;
+                                    // border: red 1px solid;
+
+                                    &:nth-child(1) {
+                                        width: 400px;
+                                    }
+
+                                    &:nth-child(2) {
+                                        width: 150px;
+                                    }
+
+                                    &:nth-child(3) {
+                                        width: 150px;
+                                    }
+
+                                    &:nth-child(4) {
+                                        width: 100px;
+                                    }
+
+                                    &:nth-child(5) {
+                                        width: 50px;
+                                    }
+
+                                }
+
+                                &:after {
+                                    border-bottom-left-radius: 10px;
+                                    border-top-left-radius: 10px;
+                                }
+
+                                &.width_4:after {
+                                    border-bottom-right-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                }
+                            }
+
+                            .bin {
+
+                                height: 44px;
+
+                            }
+
+                            &.sub {
+                                width: 662px;
+                                // border: green 1px solid;
+
+                                .data {
+                                    width: 592px;
+                                    // border: blueviolet 1px solid;
+
+                                    .cell {
+
+                                        &:nth-child(1) {
+                                            width: 370px;
+                                        }
+
+                                        &:nth-child(2) {
+                                            width: 150px;
+                                        }
+
+                                        &:nth-child(3) {
+                                            width: 150px;
+                                        }
+
+                                        &:nth-child(4) {
+                                            width: 100px;
+                                        }
+
+                                        &:nth-child(5) {
+                                            width: 50px;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .yes-no-buttons {
+                        font-size: 16px;
+
+                        a {
+                            font-size: 16px;
+
+                            &.btn {
+                                height: 46px;
+                                width: 250px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .account-summary {
+                width: 752px;
+
+                .boxes {
+                    flex-wrap: wrap;
+
+                    .box {
+                        width: 50%;
+
+                        &:nth-child(2) {
+                            border-right: none;
+                        }
+                    }
+                }
+
+            }
+
+            .account-history {
+                width: 752px;
+
+                .transaction-row {
+
+                    img.edit-btn {
+
+                        height: 34px;
+                        right: -3px;
+                    }
+
+                    .trans-col {
+                        font-size: 16px;
+
+                        img {
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+
+            .add-transaction {
+                width: 752px;
+
+                .rows {
+                    .row {
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        div {
+                            margin: 10px 30px;
+                        }
+
+                        .custom-input-2 {
+                            flex-basis: 100%;
+                            justify-content: center;
+
+                            input {
+                                width: 271px;
+                            }
+                        }
+
+                        .custom-list-3 {
+                            justify-content: center;
+                        }
+
+                        .custom-input-date-1 {
+                            input {
+                                width: 315px;
+                            }
+                        }
+
+                        .custom-list-4 {
+                            select {
+                                width: 272px;
+                            }
+                        }
+                    }
+                }
+
+                .add-new-transaction {
+                    // margin-bottom: 0;
+
+                    .row {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        height: auto;
+
+                        div {
+                            margin: 20px 30px;
+                        }
+
+                        .custom-input-2 {
+                            flex-basis: 25%;
+                            justify-content: center;
+
+                            input {
+                                width: 282px;
+                            }
+                        }
+
+                        .button {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .plus {
+                            bottom: 22px;
+                            right: 8px;
+                        }
+
+                        .leftmoney-info {
+                            bottom: -48px;
+                            right: -32px;
+                        }
+                    }
+                }
+            }
+
+            .targets-diagrams {
+                flex-wrap: wrap;
+
+                .diagram-box {
+                    width: 60%;
+                    height: 550px;
+                    margin: 20px auto;
+
+                    .diagram-box-shadow {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &.limits {
+                    flex-wrap: wrap;
+
+                    .diagram-box {
+                        width: 60%;
+                        margin: 20px auto;
+
+                        .diagram {
+                            justify-content: center;
+
+                            .circle {
+                                img {
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.targets-momoney-page {
+                .timeline {
+                    .step-wrapper {
+                        border-right: none;
+                        min-height: 0;
+                        min-width: 0;
+                        margin: 30px 0;
+
+                        .step::after {
+                            border-top: none;
+                        }
+
+                        &:nth-child(2n) {
+                            border-left: none;
+
+                            .step {
+                                margin-top: 0;
+                                right: 0;
+                            }
+
+                            .step::after {
+                                border-top: none;
+                            }
+                        }
+
+                        &:first-child {
+                            min-height: 0;
+                        }
+                    }
+                }
+            }
+
+            .targets-diagrams {
+                &.report {
+                    .diagram-box {
+                        width: 62%;
+                    }
+                }
+            }
+
+            .diagram-container {
+                width: 752px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &.reports-yearly {
+                .report-table-wrapper {
+                    width: 752px;
+
+                    .report-table {
+                        .table-heads {
+                            width: 752px;
+
+                            .table-head {
+                                font-size: 10px;
+                                width: 34px;
+
+                                &:first-child {
+                                    width: 182px;
+                                }
+
+                                &:last-child {
+                                    width: 100px;
+                                }
+
+                                .custom-list-6 {
+                                    select {
+                                        font-size: 12px;
+                                        padding-left: 5px;
+                                        padding-right: 33px;
+                                        height: 34px;
+                                        background-position: calc(100% - 10px) 50%;
+
+                                        option {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .rows {
+                            .row {
+                                width: 696px;
+                                border-radius: 10px;
+                                height: 42px;
+
+                                &.sub {
+                                    width: 660px;
+
+                                    .cell:first-child {
+                                        width: 140px;
+                                    }
+                                }
+
+                                .cell {
+                                    font-size: 9px;
+                                    width: 34px;
+
+                                    &:first-child {
+                                        font-size: 10px;
+                                        width: 170px;
+                                    }
+
+                                    &:last-child {
+                                        width: 100px;
+                                    }
+                                }
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.reports-fortune {
+                .fortune-tables {
+                    .table-wrapper {
+                        .fortune-header {
+                            .title-fortune {
+                                font-size: 16px;
+                            }
+
+                            .button {
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        .fortune-table {
+                            padding: 15px 25px;
+
+                            .row {
+                                &.head {
+                                    .item {
+                                        font-size: 16px;
+                                    }
+                                }
+
+                                .item {
+                                    font-size: 14px;
+                                }
+
+                                .value {
+                                    font-size: 14px;
+                                    width: 77px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .currency {
+                width: 752px;
+            }
+
+            &.notifications {
+                .sub-menu {
+                    .sub-menu-item.two {
+                        margin-left: 140px;
+                    }
+
+                    .sub-menu-item.three {
+                        margin-left: 110px;
+                    }
+
+                    .sub-menu-item.four {
+                        margin-left: 616px;
+                    }
+                }
+
+                .notifications-wrapper {
+                    width: 752px;
+
+                    .notifications-row {
+                        .not-content {
+                            .not-buttons {
+                                .not-button {
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+    }
+
+    .popup-with-arrow-accounts-1 {
+        left: 180px;
+    }
+
+    .right-content .main-content .add-transaction .add-new-transaction.active {
+        margin-bottom: 30px;
+    }
 }
